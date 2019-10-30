@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #part {
+            text-align: center;
+            font-size: 15px;
+            color: chocolate;
+        }
+
+        .part1 {
+            margin-left: 100px;
+            color: darkcyan;
+        }
+
+        p.center {
+            font-size: 30px;
+            text-align: center;
+            color: darkorange;
+        }
+
+        div.container {
+            margin: 0 auto;
+            width: 50%;
+            height: 100%;
+            background-color: blanchedalmond;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: stretch;
+        }
+
+        div.item {
+            margin-top: 10px;
+            background-color: cornflowerblue;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            border: 1px solid darkorange;
+        }
+        div.firstItem:first-line{
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+<!--id选择器 一个id只能被一个标签应用-->
+<p id="part">12345上山打老虎</p>
+<!--类选择器-->
+<p class="part1">老虎打不到</p>
+<p class="center">打到小松鼠</p>
+<p><a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+<div class="container">
+    <div class="item firstItem">1</div>
+    <div class="item firstItem">2</div>
+    <div class="item firstItem">3</div>
+    <div class="item firstItem">4</div>
+    <div class="item firstItem">5</div>
+    <div class="item firstItem">6</div>
+    <div class="item firstItem">7</div>
+    <div class="item firstItem">8</div>
+</div>
+
+</body>
+</html>

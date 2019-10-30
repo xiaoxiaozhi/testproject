@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+           android:duration="1000"
+           android:fillAfter="true"
+           android:fromXDelta="0%"
+           android:fromYDelta="0%"
+           android:interpolator="@android:anim/linear_interpolator"
+           android:toXDelta="100%"
+           android:toYDelta="0%"
+    >
+
+</translate>
+    <!--android:fromXDelta="0" （图片在界面开始移动时的X坐标）-->
+
+    <!--android:toXDelta="50%"（图片在界面结束移动是的X坐标）-->
+
+    <!--android:fromYDelta="0" （图片在界面结束移动是的Y坐标）-->
+
+    <!--android:toYDelta="30%"（图片在界面结束移动是的Y坐标）-->
+
+    <!--android:duration="1000" (执行时长)-->
+
+    <!--android:fillAfter="true" （是否保留动画结束时的状态）-->
+    <!--移动x坐标为例，图片左上角移动到图片右上角顶点为止-->

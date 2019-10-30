@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+       android:duration="1000"
+       android:fromAlpha="1.0"
+       android:interpolator="@android:anim/linear_interpolator"
+       android:toAlpha="0.0"/>
+    <!--android:fillAfter="true" 是否保存动画结束状态-->
+    <!--Interpolator 主要作用是可以控制动画的变化速率 ，就是动画进行的快慢节奏。-->
+    <!--控制速率都在这 https://www.cnblogs.com/onone/articles/6588335.html-->
+    <!--几种自带的动画插入器-->
+
+    <!--AccelerateInterpolator 加速，开始时慢中间加速-->
+
+    <!--DecelerateInterpolator 减速，开始时快然后减速-->
+
+    <!--AccelerateDecelerateInterolator 先加速后减速，开始结束时慢，中间加速-->
+
+    <!--AnticipateInterpolator 反向，先向相反方向改变一段再加速播放-->
+
+    <!--AnticipateOvershootInterpolator 反向加超越，先向相反方向改变，再加速播放，会超出目的值然后缓慢移动至目的值-->
+
+    <!--BounceInterpolator 跳跃，快到目的值时值会跳跃，如目的值100，后面的值可能依次为85，77，70，80，90，100-->
+
+    <!--CycleIinterpolator 循环，动画循环一定次数，值的改变为一正弦函数：Math.sin(2* mCycles* Math.PI* input)-->
+
+    <!--LinearInterpolator 线性，线性均匀改变-->
+
+    <!--OvershootInterpolator超越，最后超出目的值然后缓慢改变到目的值-->

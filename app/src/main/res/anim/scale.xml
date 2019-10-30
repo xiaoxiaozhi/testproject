@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+       android:duration="1000"
+       android:fromXScale="0.0"
+       android:fromYScale="0.0"
+       android:pivotX="50%"
+       android:pivotY="50%"
+       android:toXScale="1.0"
+       android:toYScale="1.0"
+    >
+</scale>
+    <!--pivot 决定了当前动画执行的参考位置-->
+    <!--pivotX取值	含义-->
+    <!--10	        距离动画所在view自身左边缘10像素-->
+    <!--10%	       距离动画所在view自身左边缘 的距离是整个view宽度的10%-->
+    <!--10%p	   距离动画所在view父控件左边缘的距离是整个view宽度的10%-->
