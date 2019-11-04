@@ -1,0 +1,47 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+	package
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:3:5-32
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:1-11:12
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:5:5-9:19
+	android:label
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:6:9-41
+activity#com.ln.permission.activity.PermissionsActivity
+ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:8:9-92
+	android:name
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml:8:19-80
+uses-sdk
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+		ADDED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\mytestproject\permission\src\main\AndroidManifest.xml

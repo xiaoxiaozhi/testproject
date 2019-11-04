@@ -3,6 +3,8 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="kotlin.com.myapplication">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="false"
@@ -88,9 +90,10 @@
                 <category android:name="com.zhi.app"/>
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".activity.ClassActivity"
-            android:label="Class类型解析">
+            android:name=".activity.MediaScannerActivity"
+            android:label="MediaScanner">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

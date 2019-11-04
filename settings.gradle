@@ -1,1 +1,1 @@
-include ':app',':mylibrary','myprocess'
+include ':app',':mylibrary','myprocess','permission'
