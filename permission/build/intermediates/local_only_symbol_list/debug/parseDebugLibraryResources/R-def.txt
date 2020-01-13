@@ -1,0 +1,10 @@
+R_DEF: Internal format may change without notice
+local
+id image
+layout activity_permissions
+string app_name
+string help
+string load_more_text
+string quit
+string settings
+string string_help_text

@@ -4,6 +4,7 @@
           package="kotlin.com.myapplication">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".MyApplication"
@@ -17,7 +18,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
             </intent-filter>
         </activity>
         <activity
@@ -90,7 +91,6 @@
                 <category android:name="com.zhi.app"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.MediaScannerActivity"
             android:label="MediaScanner">
@@ -99,6 +99,29 @@
 
                 <category android:name="com.zhi.app"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RichTextActivity"
+            android:label="Android富文本">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.zhi.app"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MemoryOptActivity"
+            android:label="内存优化之ArrayMap、HashMap、SapraArray">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="com.zhi.app"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.BaseActivity">
+        </activity>
+        <activity android:name=".activity.TestActivity">
         </activity>
     </application>
 

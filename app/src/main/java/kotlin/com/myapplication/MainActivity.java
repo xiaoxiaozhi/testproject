@@ -1,5 +1,6 @@
 package kotlin.com.myapplication;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
@@ -24,6 +25,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.ln.permission.PermissionsChecker;
+import com.ln.permission.activity.PermissionsActivity;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -39,6 +43,17 @@ import kotlin.com.myapplication.donghua.DhActivity;
 
 public class MainActivity extends AppCompatActivity {
     private final String CATEGORY = "com.zhi.app";
+    static final String[] PERMISSIONS = new String[]{
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.CAMERA,
+            Manifest.permission.RECORD_AUDIO,
+            Manifest.permission.MODIFY_AUDIO_SETTINGS
+    };
+    private static final int REQUEST_CODE = 0; // 请求码
+    private PermissionsChecker mPermissionsChecker; // 权限检测器
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,4 +92,31 @@ public class MainActivity extends AppCompatActivity {
         });
         recyclerView.setAdapter(adapter);
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+//        mPermissionsChecker = new PermissionsChecker(this);
+//        // 缺少权限时, 进入权限配置页面
+//        if (mPermissionsChecker.lacksPermissions(PERMISSIONS)) {
+//            startPermissionsActivity();
+//        } else {
+//        }
+    }
+
+    private void startPermissionsActivity() {
+        PermissionsActivity.startActivityForResult(this, REQUEST_CODE, PERMISSIONS);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // 拒绝时, 关闭页面, 缺少主要权限, 无法运行
+        if (requestCode == REQUEST_CODE && resultCode == PermissionsActivity.PERMISSIONS_DENIED) {
+            //拒绝
+            finish();
+        } else if (requestCode == REQUEST_CODE && resultCode == PermissionsActivity.PERMISSIONS_GRANTED) {
+            //同意
+        }
+    }
+
 }

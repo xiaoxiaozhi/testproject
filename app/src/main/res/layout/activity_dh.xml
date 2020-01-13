@@ -112,15 +112,20 @@
         <kotlin.com.myapplication.view.PathView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:clickable="true"
+            android:layout_marginTop="20dp"
             android:background="?android:attr/selectableItemBackground"
-            android:layout_marginTop="20dp"/>
+            android:clickable="true"/>
 
         <kotlin.com.myapplication.view.SuccessView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:clickable="true"
+            android:layout_marginTop="20dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"/>
+
+        <kotlin.com.myapplication.view.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:layout_marginTop="20dp"/>
 
     </LinearLayout>
