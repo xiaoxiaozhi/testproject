@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:scrollbars="vertical"
-    tools:context="kotlin.com.myapplication.donghua.DhActivity">
+    tools:context="com.myapplication.donghua.DhActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,31 +99,31 @@
 
         </LinearLayout>
 
-        <kotlin.com.myapplication.view.SineView
+        <com.myapplication.view.SineView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             />
 
-        <kotlin.com.myapplication.view.PaintView
+        <com.myapplication.view.PaintView
             android:layout_width="match_parent"
             android:layout_height="600dp"
             android:layout_marginTop="20dp"/>
 
-        <kotlin.com.myapplication.view.PathView
+        <com.myapplication.view.PathView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true"/>
 
-        <kotlin.com.myapplication.view.SuccessView
+        <com.myapplication.view.SuccessView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:clickable="true"/>
 
-        <kotlin.com.myapplication.view.ArcView
+        <com.myapplication.view.ArcView
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"/>
