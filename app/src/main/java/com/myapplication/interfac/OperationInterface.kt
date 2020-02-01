@@ -8,6 +8,6 @@ interface OperationInterface {
     }
 
     fun statusVisible(): Boolean {
-        return false
+        return true
     }
 }

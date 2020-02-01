@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(this.getClass().getName(),"onCreate");
         setContentView(com.myapplication.R.layout.activity_main);
         RecyclerView recyclerView = findViewById(com.myapplication.R.id.recycle);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, 1));
@@ -92,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         });
         recyclerView.setAdapter(adapter);
     }
+
     @Override
     protected void onResume() {
         super.onResume();

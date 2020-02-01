@@ -6,6 +6,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
+
+    <!-- Base application theme. -->
+    <style name="LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <!--<item name="android:windowIsTranslucent">true</item>//-->
+        <item name="android:windowFullscreen">true</item>//全屏
+        <item name="android:windowBackground">@mipmap/ic_launcher</item>
+        //闪屏页图片
+    </style>
+
 
 </resources>
