@@ -23,9 +23,8 @@ class ConstraintLayoutTestActivity : BaseActivity() {
         test5.setOnClickListener(View.OnClickListener { test5.visibility = View.GONE })
     }
 
-    override fun initToolbar(toolbar: Toolbar): Toolbar {
+    override fun initToolbar(toolbar: Toolbar) {
         toolbar.setTitle("ConstraintLayout布局学习")
         toolbar.navigationIcon = resources.getDrawable(R.drawable.back, null);
-        return super.initToolbar(toolbar)
     }
 }

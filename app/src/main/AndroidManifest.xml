@@ -5,6 +5,8 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 加入系统保活名单权限 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
 
     <application
         android:name=".MyApplication"
@@ -136,8 +138,36 @@
                 <category android:name="com.zhi.app"/>
             </intent-filter>
         </activity>
-        <service android:name=".MyService"></service>
 
+        <service android:name=".MyService"/>
+
+        <activity
+            android:name=".activity.MemeryActivity"
+            android:label="内存泄漏测试">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.zhi.app"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.kotlinActivity"
+            android:label="kotlin练习">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.zhi.app"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.OpenGLESActivity"
+            android:label="OpenGlES">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.zhi.app"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@ import android.view.WindowManager
 import com.myapplication.activity.BaseActivity
 
 /**
- * 一、启动优化：1.视觉优化，先用一个启动activity作为过渡，（感觉慢了一点存疑，要验证一下）
+ * 一、启动优化：1.视觉优化，先用一个启动activity作为过渡，
  * 2.页面启动时间统计 adb shell am start -S -R 10 -W 包名/activity的全限定名 -S表示重启当前应用 只启动这个activity，
  * -R 10 代表重启次数，取平均值就是该activity的启动时间
  * 前面的activity没动ThisTime activity的启动时间；TotalTime 据说是application启动时间+thisTime根绝观察和thisTime一样存疑；
@@ -20,6 +20,12 @@ import com.myapplication.activity.BaseActivity
  * 二、帧优化：https://www.jianshu.com/p/b98d0dc5362c
  * 60fps：在与手机交互过程中，如触摸和反馈60帧以下人是能够感觉出来的，60帧以上不能察觉变化
  * 为了能够实现60fps，这意味着计算渲染的大多数操作都必须在16ms内完成。
+ * 1.避免过渡绘制
+ * 1）自定义控件中onDraw()方法中做了较多的重复绘制
+ * 2）布局层级太深，层叠性太强，用户看不到的区域也会进行渲染导致耗时增加
+ * 3）一个容易忽略的点是：我们Activity使用的Theme可能会默认的加上背景色，不需要的情况下可以去掉：
+ * getWindow().setBackgroundDrawable(null);
+ * 2.https://blog.csdn.net/u013718730/article/details/89084158 查看绘制时间是否超时
  */
 class LaunchActivity : BaseActivity() {
 
@@ -29,7 +35,14 @@ class LaunchActivity : BaseActivity() {
 //        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)//代码设置全屏，本例用主题
 //        window.decorView.setBackground(resources.getDrawable(R.mipmap.ic_launcher, null))//代码设置窗口背景图，本例在主题上设置
         startActivity(Intent(this, MainActivity::class.java))
-        Log.i(this.javaClass.name,"onCreate");
+        Log.i(this.javaClass.name, "onCreate");
         finish()//MainActivity的绘制和finish结束几乎同一时间
     }
+    /**
+     *内存优化：https://www.jianshu.com/p/1972a6d1f0fc 内存分析
+     *AndroidStudio  profile 使用 https://blog.csdn.net/Double2hao/article/details/78784758
+     * 内存泄漏：循环中创建大量临时对象、onDraw中创建Paint或Bitmap对象
+     * 内存溢出：SparseArray、ArrayMap用来代替HashMap、优化bitmap显示
+     * 内存泄漏导致，内存溢出
+     */
 }

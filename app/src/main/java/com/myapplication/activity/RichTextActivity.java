@@ -32,7 +32,7 @@ public class RichTextActivity extends BaseActivity {
 
     @NotNull
     @Override
-    public Toolbar initToolbar(@NotNull Toolbar toolbar) {
+    public void initToolbar(@NotNull Toolbar toolbar) {
         toolbar.setTitle("富文本展示");
         toolbar.setNavigationIcon(android.R.drawable.ic_menu_sort_by_size);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -41,7 +41,6 @@ public class RichTextActivity extends BaseActivity {
                 finish();
             }
         });
-        return toolbar;
     }
 
     @Override

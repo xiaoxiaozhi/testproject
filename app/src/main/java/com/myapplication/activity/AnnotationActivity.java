@@ -13,6 +13,7 @@ import test.com.myprocess.MyButterknife;
 //TODO 为什么写在java-library里面的类不能再这里自动补全，// 跟butterknife不太一样
 
 public class AnnotationActivity extends AppCompatActivity {//TypeElement
+
     private int a;      // VariableElement
     @MyButterknife(R.id.tt)
     TextView aa;
