@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.myapplication">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.myapplication">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <!-- 加入系统保活名单权限 -->
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:name=".MyApplication"
@@ -16,24 +25,59 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".activity.PlayActivity"
+            android:label="播放音视频-直播">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.zhi.app" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.CustomActivity"
+            android:label="自定义view">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.zhi.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.AidlActivity"
+            android:label="aidl">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.zhi.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.OpenCVActivity"
+            android:label="opencv">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.zhi.app" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".LaunchActivity"
             android:theme="@style/LaunchTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".donghua.DhActivity"
             android:label="动画">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity android:name=".test.TestActivity">
@@ -47,18 +91,18 @@
             android:name=".activity.AdapterActivity"
             android:label="屏幕分辨率">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.TestBitmapActivity"
             android:label="测试bitmap">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
@@ -74,100 +118,114 @@
             android:name=".activity.HybridActivity"
             android:label="混合开发">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.Testctivity"
             android:label="测试">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.AnnotationActivity"
             android:label="自定义注解实现butterknife">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.MediaScannerActivity"
             android:label="MediaScanner">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.RichTextActivity"
             android:label="Android富文本">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.MemoryOptActivity"
             android:label="内存优化之ArrayMap、HashMap、SapraArray">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.BaseActivity">
-        </activity>
-        <activity android:name=".activity.TestActivity">
-        </activity>
+        <activity android:name=".activity.BaseActivity" />
+        <activity android:name=".activity.TestActivity" />
         <activity
             android:name=".activity.ConstraintLayoutTestActivity"
             android:label="ConstraintLayout布局学习">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
-
-        <service android:name=".MyService"/>
-
         <activity
             android:name=".activity.MemeryActivity"
             android:label="内存泄漏测试">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.kotlinActivity"
             android:label="kotlin练习">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.OpenGLESActivity"
             android:label="OpenGlES">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.zhi.app"/>
+                <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.HandlerActivity"
+            android:label="Handler学习">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.zhi.app" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyService" />
+        <service
+            android:name=".aidlservice.RemoteService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.myapplication.aidl" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

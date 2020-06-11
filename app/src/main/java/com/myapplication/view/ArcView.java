@@ -8,6 +8,8 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import java.text.SimpleDateFormat;
+
 public class ArcView extends View {
     public ArcView(Context context) {
         super(context);
@@ -23,6 +25,11 @@ public class ArcView extends View {
 
     public ArcView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
@@ -45,7 +52,5 @@ public class ArcView extends View {
         paint.setColor(getResources().getColor(android.R.color.darker_gray));
 
         canvas.drawArc(oval, 0, 180, false, paint);
-
-
     }
 }

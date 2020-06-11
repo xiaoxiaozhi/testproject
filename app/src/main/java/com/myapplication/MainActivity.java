@@ -61,16 +61,19 @@ public class MainActivity extends BaseActivity {
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.READ_PHONE_STATE,
             Manifest.permission.CAMERA,
+            Manifest.permission.REQUEST_INSTALL_PACKAGES,
             Manifest.permission.RECORD_AUDIO,
             Manifest.permission.MODIFY_AUDIO_SETTINGS
     };
     private static final int REQUEST_CODE = 0; // 请求码
     private PermissionsChecker mPermissionsChecker; // 权限检测器
     public static MemeryActivity ma;
-
+    static {
+        System.loadLibrary("native-lib");
+    }
     @Override
     public void initToolbar(@NotNull Toolbar toolbar) {
-        toolbar.setVisibility(View.GONE);
+        toolbar.setTitle("日常记录");
     }
 
     @Override

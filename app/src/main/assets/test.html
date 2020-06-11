@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -42,28 +43,67 @@
             height: 100px;
             border: 1px solid darkorange;
         }
-        div.firstItem:first-line{
+
+        div.firstItem:first-line {
             margin-top: 0px;
         }
     </style>
+    <script>
+        function callJs() {
+            alert("android调用js");
+            
+        }
+        function callAndroid() {
+            test.hello("js调用android方法");
+        }
+        function callAndroidP() {
+            //通过协议调用 android代码
+            document.location = "js://webview?arg1=111&arg2=222"
+        }
+
+        function clickprompt() {
+            // 通过prompt（）调用android代码
+            var result = prompt("js://demo?arg1=111&arg2=222");
+            confirm("sdsd");
+            alert("demo " + result);
+        }
+        function clickconfirm() {
+           
+
+            if (confirm("sdsd")) {
+                console.log("用户点了确定");
+            } else {
+                console.log("用户点了取消");
+            }
+
+        }
+    </script>
+
 </head>
+
 <body>
-<!--id选择器 一个id只能被一个标签应用-->
-<p id="part">12345上山打老虎</p>
-<!--类选择器-->
-<p class="part1">老虎打不到</p>
-<p class="center">打到小松鼠</p>
-<p><a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
-<div class="container">
-    <div class="item firstItem">1</div>
-    <div class="item firstItem">2</div>
-    <div class="item firstItem">3</div>
-    <div class="item firstItem">4</div>
-    <div class="item firstItem">5</div>
-    <div class="item firstItem">6</div>
-    <div class="item firstItem">7</div>
-    <div class="item firstItem">8</div>
-</div>
+    <button type="button" id="button1" onclick="callAndroid()">点击调用android代码</button>
+    <button type="button" id="button2" onclick="callAndroidP()">通过协议调用android代码</button>
+    <button type="button" id="button3" onclick="clickprompt()">prompt点击调用Android代码</button>
+    <button type="button" id="button4" onclick="callJs()">js调用自身警告框</button>
+    <button type="button" id="button5" onclick="clickconfirm()">confirm</button>
+    <!--id选择器 一个id只能被一个标签应用-->
+    <p id="part">12345上山打老虎</p>
+    <!--类选择器-->
+    <p class="part1">老虎打不到</p>
+    <p class="center">打到小松鼠</p>
+    <p><a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+    <div class="container">
+        <div class="item firstItem">1</div>
+        <div class="item firstItem">2</div>
+        <div class="item firstItem">3</div>
+        <div class="item firstItem">4</div>
+        <div class="item firstItem">5</div>
+        <div class="item firstItem">6</div>
+        <div class="item firstItem">7</div>
+        <div class="item firstItem">8</div>
+    </div>
 
 </body>
+
 </html>

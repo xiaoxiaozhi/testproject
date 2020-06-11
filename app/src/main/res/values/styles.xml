@@ -19,5 +19,39 @@
         //闪屏页图片
     </style>
 
+    <style name="Theme.Toolbar.App.Style" parent="@style/Widget.AppCompat.Toolbar">
+        <!--<item name="android:background">#33B5E5</item>-->
+        <!--注意不要用android:titleTextAppearance,要用xmlns:app="http://schemas.android.com/apk/res-auto"下的，
+                不带前缀就是app:下的-->
+        <!--主标题-->
+        <item name="title"></item>
+        <!--副标题-->
+        <item name="subtitle"></item>
+        <!--logo-->
+        <!--<item name="logo">@android:drawable/ic_menu_call</item>-->
+        <!--主标题样式-->
+        <item name="titleTextAppearance">@style/Theme.ToolBar.App.Title</item>
+        <!--副标题样式-->
+        <item name="subtitleTextAppearance">@style/Theme.ToolBar.App.Subtitle</item>
+        <item name="titleMargins">0dp</item>
+        <!--ToolBar的Home图标左侧间隙-->
+        <item name="contentInsetStart">0dp</item>
 
+        <!--当home图标折叠时显示的图标-->
+        <item name="collapseIcon">@android:drawable/ic_menu_compass</item>
+        <item name="collapseContentDescription">collapseContentDescription</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+
+    </style>
+    <!--设置toolbar标题主题-->
+    <style name="Theme.ToolBar.App.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <!--<item name="android:textColor">#ffffff</item>-->
+    </style>
+    <!--toolbar副标题主题-->
+    <style name="Theme.ToolBar.App.Subtitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">#ff0000</item>
+    </style>
 </resources>

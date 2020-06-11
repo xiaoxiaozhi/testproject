@@ -23,10 +23,12 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 
 /**
- * 3-8 bitmap 内存模型在java虚拟机上受gc管理，其他版本 native层，调用recycle()回收
+ * android 3.0-8.0 bitmap 内存模型在java虚拟机上受gc管理强调复用来解决内存优化问题，其他版本 native层，调用recycle()回收.
  * https://www.jianshu.com/p/780fb6ca2a3f 方法详解
  * 1. bitmap复用
  * 2. https://www.cnblogs.com/nimorl/p/8065071.html BitmapFactory.Options详解
+ * 3. bitmap优化：比如一张图片一亿像素手机分辨率根本没有怎么高，但是这张位图占据的内存就是一亿像素的内存这时候要压缩位图
+ * 4. 三级缓存：https://www.jianshu.com/p/70d954168c93
  */
 public class DrawBitmapView extends View {
     private Resources mResources;
@@ -65,16 +67,18 @@ public class DrawBitmapView extends View {
 
         TypedValue value = new TypedValue();
         BitmapFactory.Options options = new BitmapFactory.Options();
-        //options.inDensity 位图的像素密度
-        //options.inTargetDensity  被画出来的像素密度
+        //options.inDensity 位图的像素密度 翻看源码   final TypedValue value = new TypedValue();
+        //            is = res.openRawResource(id, value); value.density获取位图的像素密度如果获取不到默认160
+        //options.inTargetDensity  被画出来的像素密度，设备的像素密度
         options.inMutable = true;//位图能被复用
-        options.inSampleSize = 1;
+        options.inSampleSize = 1;// 按倒数缩放
         options.inTargetDensity = value.density;//不缩放，显示原始尺寸
-        options.inScaled = false;//不缩放，显示原始尺寸
+        options.inScaled = false;//true，缩放两次，decodeResource自动缩放一次公式bitmap.(w或h)*options.inTargetDensity/options.inDensity ，然后按照inSampleSize倒数缩放 ；false，缩放一次decodeResource获取原值再按照inSampleSize倒数缩放
 //        InputStream ins = getResources().openRawResource(R.drawable.record_animate_01);
 //        BitmapFactory.decodeResourceStream()
         //通过这种方式获得的bitmap都会被压缩，压缩原理https://blog.csdn.net/qiantanlong/article/details/87712906
         mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.record_animate_01, options);
+        Log.i("bitmap", "inTargetDensity：" + options.inTargetDensity + " inDensity：" + options.inDensity);
         Log.i("bitmap", "宽：" + mBitmap.getWidth() + " 高：" + mBitmap.getHeight());
         src = new Rect(0, 0, mBitmap.getWidth(), mBitmap.getHeight());
         des = new Rect(100, 10, mBitmap.getWidth() + 100, mBitmap.getHeight() + 10);
