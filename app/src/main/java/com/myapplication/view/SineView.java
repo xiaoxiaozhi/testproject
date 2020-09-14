@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.myapplication.donghua.MyInterpolator;
 import com.myapplication.utils.PointSinEvaluator;
 
 /**
@@ -53,7 +54,7 @@ public class SineView extends View {
 
         paintTxt = new Paint(Paint.ANTI_ALIAS_FLAG);
         paintTxt.setTextSize(30);
-        paintTxt.setStyle(Paint.Style.STROKE);
+        paintTxt.setStyle(Paint.Style.FILL);
         paintTxt.setTextAlign(Paint.Align.LEFT);
     }
 
@@ -104,6 +105,7 @@ public class SineView extends View {
 //                    postInvalidateDelayed(100);
                 }
             });
+            va.setInterpolator(new MyInterpolator());//实现插值器
             ObjectAnimator oa = ObjectAnimator.ofFloat(this, "radius", 20f, 50f, 20f);
             oa.setRepeatCount(ValueAnimator.INFINITE);
             oa.setRepeatMode(ValueAnimator.RESTART);

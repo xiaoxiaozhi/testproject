@@ -25,6 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.BinderActivity"></activity>
         <activity
             android:name=".activity.PlayActivity"
             android:label="播放音视频-直播">

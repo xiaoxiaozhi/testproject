@@ -11,6 +11,7 @@ import android.content.pm.ResolveInfo;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
@@ -122,6 +123,8 @@ public class MainActivity extends BaseActivity {
 //            goHuaweiSetting();
 //        }
         // 如参考，最好加入一个界面开启这些服务
+        Log.i(this.getClass().getSimpleName(), "getPath()---"+Environment.getExternalStorageDirectory().getPath());
+        Log.i(this.getClass().getSimpleName(), "getAbsolutePath()---"+Environment.getExternalStorageDirectory().getAbsolutePath());
     }
 
     @Override

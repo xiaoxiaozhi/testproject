@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="例1：Baseline对齐，约束性最强：先文字对齐，再绘制TextView控件,第二个控件文本框设置高度50dp居中显示。显示结果:文本框先对齐文字，再根据文本居中调整文本框显示位置
-"/>
+" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -32,10 +31,8 @@
             <TextView
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
-
                 android:layout_height="wrap_content"
-                android:text="123456"
-                />
+                android:text="123456" />
 
             <TextView
                 android:id="@+id/text2"
@@ -46,8 +43,7 @@
                 android:gravity="bottom"
                 android:text="123456"
                 app:layout_constraintBaseline_toBaselineOf="@+id/text1"
-                app:layout_constraintLeft_toRightOf="@+id/text1"
-                />
+                app:layout_constraintLeft_toRightOf="@+id/text1" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,7 +51,7 @@
                 android:background="@mipmap/ic_launcher"
                 android:text="带图片"
                 app:layout_constraintBaseline_toBaselineOf="@+id/text1"
-                app:layout_constraintLeft_toRightOf="@+id/text2"/>
+                app:layout_constraintLeft_toRightOf="@+id/text2" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -63,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例2：角度定位"/>
+            android:text="例2：角度定位" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -73,7 +69,7 @@
                 android:id="@+id/test3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="角度定位"/>
+                android:text="角度定位" />
 
             <TextView
                 android:id="@+id/test4"
@@ -82,7 +78,7 @@
                 android:text="角度定位2"
                 app:layout_constraintCircle="@+id/test3"
                 app:layout_constraintCircleAngle="120"
-                app:layout_constraintCircleRadius="100dp"/>
+                app:layout_constraintCircleRadius="100dp" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -91,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例3：边距  app:layout_goneMarginLeft= 和MarginLeft没有区别"/>
+            android:text="例3：边距  app:layout_goneMarginLeft= 和MarginLeft没有区别" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -101,7 +97,7 @@
                 android:id="@+id/test5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="边距测试"/>
+                android:text="边距测试" />
 
             <TextView
                 android:id="@+id/test6"
@@ -109,15 +105,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="编剧测试"
-                app:layout_constraintLeft_toRightOf="@+id/test5"
-                />
+                app:layout_constraintLeft_toRightOf="@+id/test5" />
         </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例4：剧中偏移layout_constraintHorizontal_bias只对 Left_toLeftOf=parent Right_toRightOf=parent 起作用"/>
+            android:text="例4：剧中偏移layout_constraintHorizontal_bias只对
+             Left_toLeftOf=parent Right_toRightOf=parent 起作用" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -130,25 +126,24 @@
                 android:text="居中偏移1"
                 app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/test8"/>
+                app:layout_constraintRight_toLeftOf="@+id/test8" />
 
             <TextView
                 android:id="@+id/test8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:text="剧中偏移2"
                 app:layout_constraintHorizontal_bias="1"
                 app:layout_constraintLeft_toRightOf="@+id/test7"
-                app:layout_constraintRight_toRightOf="parent"
-                />
+                app:layout_constraintRight_toRightOf="parent" />
         </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例5：尺寸约束 当宽或高至少有一个尺寸被设置为0dp时(例如宽如果两个都是0就要设置W,1:1)且  Left_toLeftOf=parent Right_toRightOf=parent限定的情况下，可以通过属性layout_constraintDimensionRatio设置宽高比"/>
+            android:text="例5：尺寸约束 当宽或高至少有一个尺寸被设置为0dp时(例如宽如果两个都是0就要设置W,1:1)
+            且  Left_toLeftOf=parent Right_toRightOf=parent限定的情况下，可以通过属性layout_constraintDimensionRatio设置宽高比" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -161,7 +156,8 @@
                 android:text="宽高比例"
                 app:layout_constraintDimensionRatio="1:2"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
                 />
 
 
@@ -171,11 +167,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例6：链 layout_constraintHorizontal_chainStyle=spread 剩余空间平分spread_insid跟前面一样但是两侧空间没有。packed居中聚集在一起。只有在第一个控件上设置的有用"/>
+            android:text="例6：链 layout_constraintHorizontal_chainStyle=spread
+            剩余空间平分spread_insid跟前面一样但是两侧空间没有。packed居中聚集在一起。只有在第一个控件上设置的有用" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content">
 
             <TextView
@@ -183,9 +179,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView1"
-                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/TextView2"/>
+                app:layout_constraintRight_toLeftOf="@+id/TextView2" />
 
             <TextView
                 android:id="@+id/TextView2"
@@ -194,7 +190,7 @@
                 android:text="TextView2"
                 app:layout_constraintLeft_toRightOf="@+id/TextView1"
                 app:layout_constraintRight_toLeftOf="@+id/TextView3"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" />
 
             <TextView
                 android:id="@+id/TextView3"
@@ -202,7 +198,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView3少时"
                 app:layout_constraintLeft_toRightOf="@+id/TextView2"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" />
 
 
         </android.support.constraint.ConstraintLayout>
@@ -211,7 +207,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例7：Barrier 阻隔 。对于这样的布局左侧有AB两个控件不知道哪个控件更宽C控件在最宽的控件右侧，这时候设置barrier。它会紧贴着最宽的那个控件。C控件只要一直在barrier右侧就可以。当然如果AB控件超过屏幕宽度C控件的显示会出问题"/>
+            android:text="例7：Barrier 阻隔 。对于这样的布局左侧有AB两个控件不知道哪个控件更宽C控件在最宽的控件右侧，这时候设置barrier。它会紧贴着最宽的那个控件。C控件只要一直在barrier右侧就可以。当然如果AB控件超过屏幕宽度C控件的显示会出问题" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -225,8 +221,7 @@
                 android:text="假设有3个控件ABC，C在AB的右边但是"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/TextView12"
@@ -234,14 +229,14 @@
                 android:layout_height="wrap_content"
                 android:text="TextView2"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextView11"/>
+                app:layout_constraintTop_toBottomOf="@+id/TextView11" />
 
             <android.support.constraint.Barrier
                 android:id="@+id/barrier"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:barrierDirection="right"
-                app:constraint_referenced_ids="TextView11,TextView12"/>
+                app:constraint_referenced_ids="TextView11,TextView12" />
 
             <TextView
                 android:id="@+id/TextView13"
@@ -251,14 +246,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintLeft_toRightOf="@+id/barrier"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" />
         </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例8：group 可以把多个控件归为一组，方便隐藏或显示一组控件 "/>
+            android:text="例8：group 可以把多个控件归为一组，方便隐藏或显示一组控件 " />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -268,35 +263,35 @@
                 android:id="@+id/TextView81"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView81"/>
+                android:text="TextView81" />
 
             <TextView
                 android:id="@+id/TextView82"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView82"
-                app:layout_constraintLeft_toRightOf="@+id/TextView81"/>
+                app:layout_constraintLeft_toRightOf="@+id/TextView81" />
 
             <TextView
                 android:id="@+id/TextView83"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView83"
-                app:layout_constraintLeft_toRightOf="@id/TextView82"/>
+                app:layout_constraintLeft_toRightOf="@id/TextView82" />
 
             <android.support.constraint.Group
                 android:id="@+id/group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
-                app:constraint_referenced_ids="TextView81,TextView83"/>
+                app:constraint_referenced_ids="TextView81,TextView83" />
         </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例9：Placeholder 占位符。在Placeholder中可使用setContent()设置另一个控件的id，使这个控件移动到占位符的位置(有什么应用场景？？？) "/>
+            android:text="例9：Placeholder 占位符。在Placeholder中可使用setContent()设置另一个控件的id，使这个控件移动到占位符的位置(有什么应用场景？？？) " />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -308,8 +303,7 @@
                 android:layout_height="wrap_content"
                 app:content="@+id/TextView91"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/TextView91"
@@ -317,15 +311,14 @@
                 android:layout_height="wrap_content"
                 android:text="本来在右侧，被placeholder设置content后移动到了最左端"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="例10：start_toEnd头尾对齐 start_toStart头头对齐 end_toStart尾头对齐 end_toEnd尾尾对齐 水平方向"/>
+            android:text="例10：start_toEnd头尾对齐 start_toStart头头对齐 end_toStart尾头对齐 end_toEnd尾尾对齐 水平方向" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -337,16 +330,14 @@
                 android:layout_height="wrap_content"
                 android:text="图片和文本框尾对齐"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/navigate"
-                app:layout_constraintEnd_toEndOf="@+id/TextView101"
-                ></ImageView>
+                app:layout_constraintEnd_toEndOf="@+id/TextView101"></ImageView>
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

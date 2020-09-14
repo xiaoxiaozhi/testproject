@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="传统动画"/>
+            android:text="传统动画" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,16 +29,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableTop="@mipmap/ic_launcher"
-                android:text="帧动画"
-                />
+                android:text="帧动画" />
 
             <TextView
                 android:id="@+id/drdc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableTop="@mipmap/ic_launcher"
-                android:text="淡入淡出"
-                />
+                android:text="淡入淡出" />
 
             <TextView
                 android:id="@+id/scale"
@@ -47,8 +44,7 @@
                 android:layout_height="wrap_content"
                 android:drawableTop="@mipmap/ic_launcher"
                 android:gravity="center_horizontal"
-                android:text="缩放"
-                />
+                android:text="缩放" />
 
             <TextView
                 android:id="@+id/rotate"
@@ -56,8 +52,7 @@
                 android:layout_height="wrap_content"
                 android:drawableTop="@mipmap/ic_launcher"
                 android:gravity="center_horizontal"
-                android:text="旋转"
-                />
+                android:text="旋转" />
 
             <TextView
                 android:id="@+id/translate"
@@ -65,68 +60,117 @@
                 android:layout_height="wrap_content"
                 android:drawableTop="@mipmap/ic_launcher"
                 android:gravity="center_horizontal"
-                android:text="位移"
-                />
+                android:text="位移" />
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="属性动画"/>
+            android:text="属性动画" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="valueAnimator演示" />
 
             <TextView
                 android:id="@+id/drdc1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableTop="@mipmap/ic_launcher"
-                android:text="淡入淡出"
-                />
+                android:gravity="center"
+                android:text="objectAnimator动画集演示" />
+
+            <TextView
+                android:id="@+id/animatorXml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:lines="1"
+                android:text="xml类型animator动画演示" />
+
 
             <TextView
                 android:id="@+id/sine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/ic_launcher"
-                android:text="正弦曲线"/>
+                android:text="正弦曲线" />
 
 
         </LinearLayout>
 
         <com.myapplication.view.SineView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            />
+            android:layout_height="200dp" />
 
         <com.myapplication.view.PaintView
             android:layout_width="match_parent"
             android:layout_height="600dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
 
         <com.myapplication.view.PathView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="?android:attr/selectableItemBackground"
-            android:clickable="true"/>
+            android:clickable="true" />
 
         <com.myapplication.view.SuccessView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:clickable="true"/>
+            android:clickable="true" />
 
         <com.myapplication.view.ArcView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_child"></ImageView>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:srcCompat="@drawable/tshirt"></ImageView>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:srcCompat="@drawable/ic_child"></ImageView>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vd_selector"></Button>
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/anima_vector">
+
+    </ImageView>
 </ScrollView>

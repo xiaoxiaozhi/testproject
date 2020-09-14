@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".activity.CustomActivity">
 
+    <com.myapplication.view.CheckableLinearLayout
+        android:id="@+id/checked1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/breakfast_bg_item_boxtype_num"
+        app:layout_constraintTop_toTopOf="parent"></com.myapplication.view.CheckableLinearLayout>
+
+    <com.myapplication.view.CheckableLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/breakfast_bg_item_boxtype_num"
+        app:layout_constraintBottom_toBottomOf="parent"></com.myapplication.view.CheckableLinearLayout>
 </android.support.constraint.ConstraintLayout>

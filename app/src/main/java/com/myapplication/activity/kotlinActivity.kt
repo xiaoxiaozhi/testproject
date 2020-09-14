@@ -12,6 +12,12 @@ import com.myapplication.module.KotlinClass
  *
  */
 class kotlinActivity : BaseActivity() {
+    //静态代码块
+    companion object {
+        init {
+            //你想静态化的东西,外面不要有函数
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

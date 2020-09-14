@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!--只有在animator文件夹下面才会有objectAnimator标签-->
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="100"
+    android:repeatCount="infinite"
+    android:repeatMode="reverse">
+
+</objectAnimator>
