@@ -152,25 +152,117 @@
                 android:layout_height="300dp"
                 app:srcCompat="@drawable/tshirt"></ImageView>
 
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                app:srcCompat="@drawable/ic_child"></ImageView>
-
-
         </LinearLayout>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/ic_child"></ImageView>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/vd_selector"></Button>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="矢量图动画"></TextView>
+
+        <ImageView
+            android:id="@+id/vectAnimator"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/anima_vector"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="矢量图动-轨迹绘制动画"></TextView>
+
+        <ImageView
+            android:id="@+id/trimPath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/searchbar_av"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="矢量图动-轨迹变换动画()"></TextView>
+
+        <ImageView
+            android:id="@+id/changePath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/path_change_av"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="贝塞尔曲线"></TextView>
+
+        <com.myapplication.donghua.BezierView2
+            android:id="@+id/bezier2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/white"></com.myapplication.donghua.BezierView2>
+
+        <com.myapplication.donghua.BezierView3
+            android:id="@+id/bezier3"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/white"></com.myapplication.donghua.BezierView3>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="贝塞尔曲线优化路径：绘制路径更平滑"></TextView>
+
+        <com.myapplication.donghua.BezierOptView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/white"></com.myapplication.donghua.BezierOptView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="贝塞尔曲线优化路径变换"></TextView>
+
+        <com.myapplication.donghua.BezierChangeView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/white"></com.myapplication.donghua.BezierChangeView>
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="贝塞尔曲线-波浪线"></TextView>-->
+
+<!--        <com.myapplication.donghua.BezierChangeView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:background="@android:color/white"></com.myapplication.donghua.BezierChangeView>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PathMeasure路径绘制"></TextView>
+
+        <com.myapplication.donghua.PathMeasureView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/white"></com.myapplication.donghua.PathMeasureView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PathMeasure路径绘制-切线"></TextView>
+
+        <com.myapplication.donghua.PathPOSTanView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@android:color/white"></com.myapplication.donghua.PathPOSTanView>
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/anima_vector">
-
-    </ImageView>
 </ScrollView>

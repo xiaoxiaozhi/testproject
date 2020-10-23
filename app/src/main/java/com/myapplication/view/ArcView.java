@@ -6,6 +6,7 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 import java.text.SimpleDateFormat;
@@ -52,5 +53,10 @@ public class ArcView extends View {
         paint.setColor(getResources().getColor(android.R.color.darker_gray));
 
         canvas.drawArc(oval, 0, 180, false, paint);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
     }
 }

@@ -1,17 +1,24 @@
 package com.myapplication.activity;
 
+import android.media.MediaCodec;
+import android.media.MediaFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.SurfaceView;
 import android.widget.Toast;
 
+import com.myapplication.utils.TtsUtils;
 import com.mylibrary.test.MyAnnotation;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 import com.myapplication.R;
+
 import test.com.myprocess.MyButterknife;
 
 // 跟java 一样 执行顺序 静态代码块、代码块、构造函数、onCreate 在onCreate执行之前Toast执行不了
@@ -22,6 +29,7 @@ public class Testctivity extends AppCompatActivity {
 
     static {
         Log.i("Testctivity", "静态代码块");
+
     }
 
     public Testctivity() {
@@ -34,6 +42,7 @@ public class Testctivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testctivity);
         Log.i(getClass().getName(), "onCreate");
+        new TtsUtils().speak("12345上山打老虎");
 //        new Thread() {
 //            @Override
 //            public void run() {
@@ -75,6 +84,8 @@ public class Testctivity extends AppCompatActivity {
                 }
             }
         }.start();
+
+
     }
 
     public class ProducerConsumer {

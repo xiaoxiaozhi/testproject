@@ -28,9 +28,15 @@ import android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
  *     ①② 适合适合单个任务场景  ③适合串行多任务场景 ④适合与ui无关的多任务 ⑤最适合并行多任务场景
  */
 class MyApplication : Application() {
+    companion object {
+        private var instance: Application? = null;
+        fun getInstance() = instance!!;
+    }
+
     override fun onCreate() {
         super.onCreate()
         Log.i(this.javaClass.name, "onCreate")
+        instance = this;
         val hand = Thread(Runnable {
             //android.os.Process https://blog.csdn.net/Simon_Crystin/article/details/70315106  android 进城
             Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND)//这个类属于android.os。线程划入低优先级组
@@ -63,6 +69,7 @@ class MyApplication : Application() {
         //appllication 启动调用顺序attachBaseContext-》onCreate
         //计算程序启动初始时间 在activity的onWindowFocusChanged计算截面显示的截止时间
     }
+
 
     /**
      * onTrimMemory的参数是一个int数值，代表不同的内存状态：

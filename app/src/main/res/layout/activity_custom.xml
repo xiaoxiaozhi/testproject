@@ -13,9 +13,31 @@
         android:background="@drawable/breakfast_bg_item_boxtype_num"
         app:layout_constraintTop_toTopOf="parent"></com.myapplication.view.CheckableLinearLayout>
 
+    <com.myapplication.donghua.BezierView2
+        android:id="@+id/bezier2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/checked1"></com.myapplication.donghua.BezierView2>
+
+    <com.myapplication.donghua.BezierView3
+        android:id="@+id/bezier3"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/bezier2"></com.myapplication.donghua.BezierView3>
+
+    <com.myapplication.donghua.BezierOptView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/bezier3"></com.myapplication.donghua.BezierOptView>
+
     <com.myapplication.view.CheckableLinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@drawable/breakfast_bg_item_boxtype_num"
         app:layout_constraintBottom_toBottomOf="parent"></com.myapplication.view.CheckableLinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

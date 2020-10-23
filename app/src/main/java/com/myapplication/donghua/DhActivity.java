@@ -1,27 +1,25 @@
 package com.myapplication.donghua;
 
-import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.app.ActionBar;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.myapplication.R;
-import com.myapplication.view.SineView;
 
 //https://www.jianshu.com/p/2412d00a0ce4 属性动画
+//vector与bitmap 从使用频率和图像复杂度考虑1.前者简单图形，复杂图形gpu有缓存性能更好2.vector效率很高图像更新频率低使用3.前者加载速度快但是渲染速度比不上后者
 public class DhActivity extends AppCompatActivity implements View.OnClickListener {
     TextView drdc, scale;
     ImageView zdh;
@@ -52,10 +50,20 @@ public class DhActivity extends AppCompatActivity implements View.OnClickListene
         //属性动画 动画文件放在animator文件夹中，或者代码实现
         objectAnimator();
         valueAnimator();
-        //属性动画-估值器:控制值的具体变化
-        // 正弦曲线
-        //属性动画-插值器
+        //属性动画-估值器:正弦曲线 控制值的具体变化
+        //属性动画-插值器:正弦曲线
 
+        //属性动画-矢量图动画-移动: 需要创建粘合剂animated-vector 矢量图和动画放在一起，然后把粘合剂设置给ImageView app:srcCompat
+        //注意粘合剂放在 drawable文件夹，属性动画放在animator文件夹
+        vecteAnimator(R.id.vectAnimator);
+        //属性动画-矢量图动画-轨迹绘制动画:
+        // 轨迹属性 trimePathStart，trimePathEnd，trim意思截取当valueFrom是1的时候代表没有图像 填充色色属性fillColor
+        //strokeColor 笔划色属性
+        vecteAnimator(R.id.trimPath);
+        //属性动画-矢量图动画-轨迹变换动画(5.0以上)
+//        vecteAnimator(R.id.changePath);
+        //属性动画-矢量图动画-轨迹变换动画(5.0以下)
+        vecteAnimatorCompatible(R.id.changePath);
     }
 
     @Override
@@ -170,6 +178,27 @@ public class DhActivity extends AppCompatActivity implements View.OnClickListene
         });
         animator.start();
 // 启动动画
+    }
 
+
+    void vecteAnimator(int id) {
+        ImageView vectAnimator = findViewById(id);
+        if (vectAnimator.getDrawable() != null) {
+            ((Animatable) vectAnimator.getDrawable()).start();
+        }
+    }
+
+    /**
+     * 轨迹变换动画，在5.0以下实现方法
+     *
+     * @param id
+     */
+    void vecteAnimatorCompatible(int id) {
+        ImageView vectAnimator = findViewById(id);
+        AnimatedVectorDrawable av = (AnimatedVectorDrawable) getDrawable(R.drawable.path_change_av);
+        vectAnimator.setImageDrawable(av);
+        if (av != null) {
+            av.start();
+        }
     }
 }

@@ -6,6 +6,6 @@
         android:animation="@animator/obj_animator_right"></target>
     <target
         android:name="left"
-        android:animation="@animator/obj_animator_right"></target>
+        android:animation="@animator/obj_animator_left"></target>
 
 </animated-vector>
