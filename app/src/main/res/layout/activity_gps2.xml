@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.myapplication.module.User"></import>
+
+        <import type="com.myapplication.module.UserHandler"></import>
+
+        <import type="com.myapplication.module.ObservableUser"></import>
+
+        <variable
+            name="userInfo"
+            type="User" />
+
+        <variable
+            name="userHandler"
+            type="UserHandler" />
+
+        <variable
+            name="obsUser"
+            type="ObservableUser" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.GpsActivity">
+
+        <TextView
+            android:id="@+id/gpsTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+
+    </LinearLayout>
+</layout>

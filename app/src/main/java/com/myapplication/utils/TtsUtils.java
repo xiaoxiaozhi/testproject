@@ -1,5 +1,8 @@
 package com.myapplication.utils;
 
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
@@ -14,9 +17,14 @@ public class TtsUtils {
     private static TtsUtils ttsUtils;
 
     public void speak(String playText) {
+
         if (mTextToSpeech != null) {
             Log.e(TAG, " playText ready to play:" + playText);
-            mTextToSpeech.speak(playText, TextToSpeech.QUEUE_ADD, null, "systemttsid");
+            Message msg = new Message();
+            Bundle bundle = new Bundle();
+            bundle.putString("msg", playText);
+            msg.setData(bundle);
+            handler.sendMessageDelayed(msg, 200);
         } else {
             Log.e(TAG, " playText txttospeech null");
         }
@@ -43,6 +51,14 @@ public class TtsUtils {
     public TtsUtils() {
         initTts();
     }
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            mTextToSpeech.speak(msg.getData().getString("msg"), TextToSpeech.QUEUE_ADD, null, "systemttsid");
+        }
+    };
 
     public void initTts() {
         try {

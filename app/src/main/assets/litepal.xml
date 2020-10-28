@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="gid4.0"></dbname>
+
+    <version value="10"></version>
+
+    <list>
+        <mapping class="com.cpsdna.careyes4.entity.SettingEntry"></mapping>
+    </list>
+
+</litepal>

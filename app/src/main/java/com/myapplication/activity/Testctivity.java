@@ -32,17 +32,26 @@ public class Testctivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (TtsUtils.getInstance() != null) {
+            TtsUtils.getInstance().stop();
+        }
+    }
+
     public Testctivity() {
         Log.i(getClass().getSimpleName(), "构造函数");
 //        Toast.makeText(getApplication(), "toast", Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testctivity);
         Log.i(getClass().getName(), "onCreate");
-        new TtsUtils().speak("12345上山打老虎");
+        TtsUtils.getInstance().speak("12345上山打老虎");
 //        new Thread() {
 //            @Override
 //            public void run() {
@@ -69,21 +78,21 @@ public class Testctivity extends AppCompatActivity {
 //            }
 //        }
 //        System.out.println("执行结束");
-        ProducerConsumer pConsumer = new ProducerConsumer();
-        new Thread("生产者") {
-            public void run() {
-                while (true) {
-                    pConsumer.product();
-                }
-            }
-        }.start();
-        new Thread("消费者") {
-            public void run() {
-                while (true) {
-                    pConsumer.consumer();
-                }
-            }
-        }.start();
+//        ProducerConsumer pConsumer = new ProducerConsumer();
+//        new Thread("生产者") {
+//            public void run() {
+//                while (true) {
+//                    pConsumer.product();
+//                }
+//            }
+//        }.start();
+//        new Thread("消费者") {
+//            public void run() {
+//                while (true) {
+//                    pConsumer.consumer();
+//                }
+//            }
+//        }.start();
 
 
     }
