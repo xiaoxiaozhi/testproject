@@ -1,14 +1,10 @@
 package com.myapplication.utils;
 
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 
 import com.myapplication.MyApplication;
-
 
 public class TtsUtils {
     public static String TAG = "TtsUtils";
@@ -17,14 +13,9 @@ public class TtsUtils {
     private static TtsUtils ttsUtils;
 
     public void speak(String playText) {
-
         if (mTextToSpeech != null) {
-            Log.e(TAG, " playText ready to play:" + playText);
-            Message msg = new Message();
-            Bundle bundle = new Bundle();
-            bundle.putString("msg", playText);
-            msg.setData(bundle);
-            handler.sendMessageDelayed(msg, 200);
+            Log.e(TAG, " playText ready to play:" + playText + " " + Thread.currentThread().getName());
+            mTextToSpeech.speak(playText, TextToSpeech.QUEUE_ADD, null, "systemttsid");
         } else {
             Log.e(TAG, " playText txttospeech null");
         }
@@ -52,14 +43,6 @@ public class TtsUtils {
         initTts();
     }
 
-    Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            mTextToSpeech.speak(msg.getData().getString("msg"), TextToSpeech.QUEUE_ADD, null, "systemttsid");
-        }
-    };
-
     public void initTts() {
         try {
             mTextToSpeech = new TextToSpeech(MyApplication.Companion.getInstance(), new TextToSpeech.OnInitListener() {
@@ -68,7 +51,7 @@ public class TtsUtils {
                     if (status == TextToSpeech.SUCCESS) {
                         Log.e(TAG, "system tts init success");
                         mTextToSpeech.setPitch(1.0f);//max-girl  min-boy
-                        mTextToSpeech.setSpeechRate(1.0f); //1.5f  4.7word/second  0.5f 2.4word/second
+                        mTextToSpeech.setSpeechRate(0.8f); //1.5f  4.7word/second  0.5f 2.4word/second
                         mTextToSpeech.setOnUtteranceProgressListener(mttsProgressListener);
                     }
                 }

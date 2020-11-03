@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "D:\\AndroidSDK\\ndk\\21.1.6352462",
+  "ndkFolder": "D:\\AndroidSDK\\ndk\\21.3.6528147",
   "messages": [
     {
       "level": "INFO",
@@ -7,7 +7,7 @@
     },
     {
       "level": "INFO",
-      "message": "ndk.dir in local.properties is D:\\AndroidSDK\\ndk\\21.1.6352462"
+      "message": "ndk.dir in local.properties is D:\\AndroidSDK\\ndk\\21.3.6528147"
     },
     {
       "level": "INFO",
@@ -19,7 +19,7 @@
     },
     {
       "level": "INFO",
-      "message": "Considering D:\\AndroidSDK\\ndk\\21.1.6352462 by ndk.dir"
+      "message": "Considering D:\\AndroidSDK\\ndk\\21.3.6528147 by ndk.dir"
     },
     {
       "level": "INFO",
@@ -27,23 +27,11 @@
     },
     {
       "level": "INFO",
-      "message": "Considering D:\\AndroidSDK\\ndk\\20.0.5594570 in SDK ndk folder"
-    },
-    {
-      "level": "INFO",
-      "message": "Considering D:\\AndroidSDK\\ndk\\21.0.6113669 in SDK ndk folder"
-    },
-    {
-      "level": "INFO",
-      "message": "Considering D:\\AndroidSDK\\ndk\\21.1.6352462 in SDK ndk folder"
-    },
-    {
-      "level": "INFO",
       "message": "Considering D:\\AndroidSDK\\ndk\\21.3.6528147 in SDK ndk folder"
     },
     {
       "level": "INFO",
-      "message": "Found requested ndk.dir (D:\\AndroidSDK\\ndk\\21.1.6352462) which has version 21.1.6352462"
+      "message": "Found requested ndk.dir (D:\\AndroidSDK\\ndk\\21.3.6528147) which has version 21.3.6528147"
     }
   ]
 }

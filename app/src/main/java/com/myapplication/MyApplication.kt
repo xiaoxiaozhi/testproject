@@ -8,6 +8,7 @@ import android.os.*
 import android.util.Log
 import android.provider.Settings
 import android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+import org.litepal.LitePal
 
 
 /**
@@ -62,6 +63,7 @@ class MyApplication : Application() {
             }
         }
         workHandler.sendEmptyMessage(111)
+        LitePal.initialize(this);
     }
 
     override fun attachBaseContext(base: Context) {

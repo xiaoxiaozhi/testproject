@@ -28,6 +28,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activity.LitePalActivity"
+            android:label="latepal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.zhi.app" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".activity.WheelActivity"
             android:label="wheel控件">
             <intent-filter>

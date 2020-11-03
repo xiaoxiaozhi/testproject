@@ -6,7 +6,7 @@
     <version value="10"></version>
 
     <list>
-        <mapping class="com.cpsdna.careyes4.entity.SettingEntry"></mapping>
+        <mapping class="com.myapplication.module.SettingEntry"></mapping>
     </list>
 
 </litepal>
