@@ -5,7 +5,7 @@ import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
+;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceView;
@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.myapplication.R;
 import com.myapplication.utils.WangyiPlayer;

@@ -2,7 +2,8 @@ package com.ln.permission;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.content.ContextCompat;
 
 /**
  * Created by lvzhaohui on 2018/9/27.

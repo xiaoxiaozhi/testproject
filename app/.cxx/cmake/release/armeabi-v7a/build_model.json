@@ -20,6 +20,10 @@
       "cmakeExecutable": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
       "variables": [
         {
+          "name": "CMAKE_FIND_ROOT_PATH",
+          "value": "D:\\workspace\\mytestproject\\app\\.cxx\\cmake\\release\\prefab\\armeabi-v7a\\prefab"
+        },
+        {
           "name": "CMAKE_BUILD_TYPE",
           "value": "Release"
         },
@@ -162,6 +166,7 @@
         "X86",
         "X86_64"
       ],
+      "ndkDefaultStl": "LIBCXX_STATIC",
       "ndkVersion": "21.3.6528147",
       "project": {
         "compilerSettingsCacheFolder": "D:\\workspace\\mytestproject\\.cxx",
@@ -170,7 +175,8 @@
         "isCmakeBuildCohabitationEnabled": false,
         "isNativeCompilerSettingsCacheEnabled": false,
         "rootBuildGradleFolder": "D:\\workspace\\mytestproject",
-        "sdkFolder": "D:\\AndroidSDK"
+        "sdkFolder": "D:\\AndroidSDK",
+        "isPrefabEnabled": false
       },
       "splitsAbiFilterSet": [],
       "stlSharedObjectMap": {
@@ -189,6 +195,9 @@
     "variantName": "release",
     "validAbiList": [
       "ARMEABI_V7A"
-    ]
-  }
+    ],
+    "prefabDirectory": "D:\\workspace\\mytestproject\\app\\.cxx\\cmake\\release\\prefab",
+    "prefabPackageDirectoryList": []
+  },
+  "prefabFolder": "D:\\workspace\\mytestproject\\app\\.cxx\\cmake\\release\\prefab\\armeabi-v7a"
 }

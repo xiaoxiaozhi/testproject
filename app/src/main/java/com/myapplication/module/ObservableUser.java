@@ -1,8 +1,8 @@
 package com.myapplication.module;
 
-import android.databinding.Bindable;
-import android.databinding.ObservableField;
-import android.databinding.ObservableFloat;
+
+import androidx.databinding.ObservableField;
+import androidx.databinding.ObservableFloat;
 
 public class ObservableUser {
 

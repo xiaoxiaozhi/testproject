@@ -2,12 +2,14 @@ package com.myapplication.activity;
 
 import android.media.MediaCodec;
 import android.media.MediaFormat;
-import android.support.v7.app.AppCompatActivity;
+;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.myapplication.utils.TtsUtils;
 import com.mylibrary.test.MyAnnotation;

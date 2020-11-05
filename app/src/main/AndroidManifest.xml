@@ -27,6 +27,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.ArchitectureActivity"></activity>
         <activity
             android:name=".activity.LitePalActivity"
             android:label="latepal">
@@ -63,7 +64,6 @@
                 <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.BinderActivity" />
         <activity
             android:name=".activity.PlayActivity"
             android:label="播放音视频-直播">
@@ -119,13 +119,6 @@
                 <category android:name="com.zhi.app" />
             </intent-filter>
         </activity>
-        <activity android:name=".test.TestActivity">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN"/> -->
-            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
-            <!-- </intent-filter> -->
-        </activity>
         <activity
             android:name=".activity.AdapterActivity"
             android:label="屏幕分辨率">
@@ -165,15 +158,6 @@
         <activity
             android:name=".activity.Testctivity"
             android:label="测试">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="com.zhi.app" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.AnnotationActivity"
-            android:label="自定义注解实现butterknife">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

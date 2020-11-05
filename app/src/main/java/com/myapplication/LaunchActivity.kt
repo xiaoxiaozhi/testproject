@@ -2,7 +2,7 @@ package com.myapplication
 
 import android.app.PendingIntent.getActivity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager

@@ -1,18 +1,33 @@
 package com.myapplication.activity;
 
-import android.databinding.DataBindingUtil;
-import android.databinding.Observable;
-import android.support.v7.app.AppCompatActivity;
+;
 import android.os.Bundle;
+import android.text.Spanned;
+import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.android.databinding.library.baseAdapters.BR;
+import androidx.databinding.BindingAdapter;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.Observable;
+import androidx.databinding.library.baseAdapters.BR;
+
+
 import com.myapplication.R;
 import com.myapplication.databinding.ActivityDataBindingBinding;
 import com.myapplication.module.ObservableUser;
 import com.myapplication.module.User;
 import com.myapplication.module.UserHandler;
 
-public class DataBindingActivity extends AppCompatActivity {
+//1.单向绑定
+//2.双向绑定 比单向绑定多了个 =号 android:text="@={goods.name}" ,
+//3.子activity使用DataBinding
+//4.自定义控件实现DataBinding
+//要点：android:text="@{obsUser.name??myList.get(1)}" 空合并运算符 ?? 会取第一个不为 null 的值作为返回值
+//5.BindingAdapter
+//6.BindingConversion
+public class DataBindingActivity extends BaseActivity {
+    private final static String TAG = "DataBindingActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,4 +55,33 @@ public class DataBindingActivity extends AppCompatActivity {
 //        ObservableUser observableUser = new ObservableUser("李四", 100f, "123");
         binding.getObsUser().name.set("李四哥");
     }
+
+    /**
+     *
+     */
+    @BindingAdapter({"url"})
+    public static void loadImage(ImageView view, String url) {
+        Log.e(TAG, "loadImage url : " + url);
+    }
+
+    /**
+     * dataBInding框架提供一种介入方式，任何控件在 xml中使用了 android:text属性，都可以在这里介入。
+     *
+     * @param view
+     * @param text
+     */
+//    @BindingAdapter("android:text")
+//    public static void setText(TextView view, CharSequence text) {
+//        Log.e(TAG, "TextView " + view.hashCode() + " CharSequence : " + text);
+//        final CharSequence oldText = view.getText();
+//        if (text == oldText || (text == null && oldText.length() == 0)) {
+//            return;
+//        }
+//        if (text instanceof Spanned) {
+//            if (text.equals(oldText)) {
+//                return; // No change in the spans, so don't set anything.
+//            }
+//        }
+//        view.setText(text);
+//    }
 }

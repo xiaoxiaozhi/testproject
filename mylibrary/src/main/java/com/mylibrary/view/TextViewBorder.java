@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.mylibrary.R;
 
-public class TextViewBorder extends TextView {
+public class TextViewBorder extends androidx.appcompat.widget.AppCompatTextView {
     private static final int STROKE_WIDTH = 2;
     private int borderCol;
 

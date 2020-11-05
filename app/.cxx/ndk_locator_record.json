@@ -3,7 +3,7 @@
   "messages": [
     {
       "level": "INFO",
-      "message": "android.ndkVersion from module build.gradle is not set"
+      "message": "android.ndkVersion from module build.gradle is 21.3.6528147"
     },
     {
       "level": "INFO",
@@ -31,7 +31,7 @@
     },
     {
       "level": "INFO",
-      "message": "Found requested ndk.dir (D:\\AndroidSDK\\ndk\\21.3.6528147) which has version 21.3.6528147"
+      "message": "Choosing D:\\AndroidSDK\\ndk\\21.3.6528147 from ndk.dir which had the requested version 21.3.6528147"
     }
   ]
 }

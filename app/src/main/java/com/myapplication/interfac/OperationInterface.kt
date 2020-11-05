@@ -1,6 +1,7 @@
 package com.myapplication.interfac
 
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
+
 
 interface OperationInterface {
     /**

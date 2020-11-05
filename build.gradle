@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.10'
+    ext.kotlin_version = '1.4.10'
 
     //Android Studio中统一管理版本号引用配置 https://blog.csdn.net/gao_chun/article/details/58105089
     repositories {
@@ -10,7 +10,7 @@ buildscript {
     } 
     dependencies {
 //     gradle插件和gradl版本对应关系   https://www.jianshu.com/p/878a11dbf1ba
-        classpath 'com.android.tools.build:gradle:3.6.1'//gradle插件版本
+        classpath 'com.android.tools.build:gradle:4.0.1'//gradle插件版本
         classpath 'com.antfortune.freeline:gradle:0.8.8'
 
         // NOTE: Do not place your application dependencies here; they belong

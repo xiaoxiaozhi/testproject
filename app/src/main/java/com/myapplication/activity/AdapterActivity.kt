@@ -1,15 +1,13 @@
 package com.myapplication.activity
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.WindowManager
+import androidx.appcompat.widget.Toolbar
 
 import com.myapplication.R
-import com.mylibrary.utils.StatusBarUtil.getStatusBarHeight
 import kotlinx.android.synthetic.main.activity_adapter.*
 
 

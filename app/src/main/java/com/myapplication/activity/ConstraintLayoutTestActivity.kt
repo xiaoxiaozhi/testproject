@@ -1,9 +1,7 @@
 package com.myapplication.activity
-
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
 import android.view.View
+import androidx.appcompat.widget.Toolbar
 import com.myapplication.R
 import kotlinx.android.synthetic.main.activity_constraint_layout_test.*
 

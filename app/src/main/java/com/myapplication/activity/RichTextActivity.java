@@ -2,9 +2,9 @@ package com.myapplication.activity;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
+;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -16,6 +16,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.widget.Toolbar;
 
 import com.myapplication.R;
 

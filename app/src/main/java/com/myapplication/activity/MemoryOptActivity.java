@@ -1,17 +1,14 @@
 package com.myapplication.activity;
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.SparseArray;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Date;
 import java.util.HashMap;
 
 import com.myapplication.R;
-
-
-
 /**
  * https://blog.csdn.net/wanderlustLee/article/details/84658976
  */

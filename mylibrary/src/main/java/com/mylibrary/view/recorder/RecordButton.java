@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.example.mylibrary.R;
 
 
-public class RecordButton extends Button {
+public class RecordButton extends androidx.appcompat.widget.AppCompatButton {
 
     private static final int MIN_RECORD_TIME = 1; // 最短录音时间，单位秒
     private static final int RECORD_OFF = 0; // 不在录音

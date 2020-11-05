@@ -1,11 +1,10 @@
 package com.myapplication.activity
 
-import android.support.v7.app.AppCompatActivity
+
 import android.os.Bundle
 import com.myapplication.R
 import android.app.Activity
 import com.myapplication.MainActivity
-import kotlinx.android.synthetic.main.activity_memery.*
 
 
 /**
@@ -17,9 +16,9 @@ class MemeryActivity : BaseActivity() {
     private var sActivity: Activity? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_memery)
-        sActivity = this
-        finish.setOnClickListener { finish() }
+//        setContentView(R.layout.activity_memery)
+//        sActivity = this
+//        finish.setOnClickListener { finish() }
         MainActivity.ma = this
     }
 }

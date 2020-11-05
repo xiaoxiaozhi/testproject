@@ -1,6 +1,7 @@
 Executable : D:\AndroidSDK\cmake\3.10.2.4988404\bin\cmake.exe
 arguments : 
 -HD:\workspace\mytestproject\app
+-DCMAKE_FIND_ROOT_PATH=D:\workspace\mytestproject\app\.cxx\cmake\debug\prefab\armeabi-v7a\prefab
 -DCMAKE_BUILD_TYPE=Debug
 -DCMAKE_TOOLCHAIN_FILE=D:\AndroidSDK\ndk\21.3.6528147\build\cmake\android.toolchain.cmake
 -DANDROID_ABI=armeabi-v7a

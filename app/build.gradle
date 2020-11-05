@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
@@ -57,6 +59,7 @@ android {
     dataBinding {
         enabled = true
     }
+    ndkVersion '21.3.6528147'
 }
 
 
@@ -70,14 +73,9 @@ dependencies {
     implementation project(':myprocess')
     implementation 'com.android.support:appcompat-v7:28.0.0'
 //    compileOnly files('D:/workspace/aj7/rt.jar')
-    implementation 'com.jakewharton:butterknife:8.8.1'
     implementation files('libs\\litepal-1.5.0.jar')
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation project(':permission')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation project(path: ':openCVLibrary330')
 
 }
-
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'

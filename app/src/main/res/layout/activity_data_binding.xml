@@ -11,6 +11,12 @@
 
         <import type="com.myapplication.module.ObservableUser"></import>
 
+        <import type="java.util.ArrayList"></import>
+
+        <import type="java.util.HashMap"></import>
+
+        <import type="android.graphics.Bitmap"></import>
+
         <variable
             name="userInfo"
             type="User" />
@@ -22,6 +28,14 @@
         <variable
             name="obsUser"
             type="ObservableUser" />
+
+        <variable
+            name="myMap"
+            type="HashMap&lt;String,String>" />
+
+        <variable
+            name="myList"
+            type="ArrayList&lt;String>" />
     </data>
 
     <LinearLayout
@@ -34,17 +48,17 @@
             android:id="@+id/gpsTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{userInfo.name}"></TextView>
+            android:text="@{userInfo.name,default=ma}"></TextView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{userInfo.password}"></TextView>
+            android:text="@{userInfo.password+myMap[`name`]}"></TextView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{obsUser.name}"></TextView>
+            android:text="@{obsUser.name??myList.get(1)}"></TextView>
 
         <Button
             android:layout_width="match_parent"

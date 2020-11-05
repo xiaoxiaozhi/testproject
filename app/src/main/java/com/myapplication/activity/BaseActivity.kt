@@ -6,7 +6,6 @@ import android.content.ComponentCallbacks
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.util.Log
@@ -14,6 +13,7 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 import com.myapplication.interfac.OperationInterface
 
 import com.myapplication.R
@@ -70,7 +70,7 @@ open class BaseActivity : AppCompatActivity(), OperationInterface {
                 baseLayout.fitsSystemWindows = true
             }
         }
-        findViewById<LinearLayout>(R.id.container).addView(layoutInflater.inflate(layoutResID, null))
+        container.addView(layoutInflater.inflate(layoutResID, null))
     }
 
     fun setTitle(title: String) {

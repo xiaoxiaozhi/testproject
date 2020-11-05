@@ -3,7 +3,8 @@ package com.myapplication.binder;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 /**
  *android 基于文件的形式实现进程通信：dev目录下 binder 文件
