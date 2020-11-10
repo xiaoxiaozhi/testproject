@@ -23,6 +23,7 @@ import java.text.DecimalFormat;
 public class GpsActivity extends AppCompatActivity {
     Location location;
     ActivityGps2Binding binding;
+    float speed;
 
     @SuppressLint("MissingPermission")
     @Override
@@ -58,7 +59,7 @@ public class GpsActivity extends AppCompatActivity {
                 updateToNewLocation(location);//进入更新程序
             }
         });
-
+        binding.gpsTxt.setText(String.valueOf(speed));
     }
 
     private void updateToNewLocation(Location location) {
@@ -66,7 +67,7 @@ public class GpsActivity extends AppCompatActivity {
         if (location != null) {
             double latitude = location.getLatitude();//维度
             double longitude = location.getLongitude();//经度
-            float speed = location.getSpeed();//取得速度
+            speed = location.getSpeed() * 0.28f;//取得速度
 //            speed * 0.28;//米/秒转换成公里/小时
 //            DecimalFormat decimalFormat = new DecimalFormat("0.00");//构造方法的字符格式这里如果小数不足2位,会以0补足.
 //            String p = decimalFormat.format(speed * 3.6);//format 返回的是字符串

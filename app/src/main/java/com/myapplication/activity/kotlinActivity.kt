@@ -49,6 +49,9 @@ class kotlinActivity : BaseActivity() {
 //        }
         //2.类
         var kot = KotlinClass("kotlin类测试")//像调用函数那样实例化类
+        kot.p1 = "123";
+        kot.no = 1;
+        println("p1 = ${kot.p1} no = ${kot.no}")
         Thread(object : Runnable {
             override fun run() {
 // 匿名内部类

@@ -33,6 +33,7 @@ task clean(type: Delete) {
 ext {
 
     // SDK And Tools
+    navigationVersion = "2.0.0"
     minSdkVersion = 21
     targetSdkVersion = 28
     compileSdkVersion = 28

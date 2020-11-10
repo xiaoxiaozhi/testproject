@@ -1,2 +1,3 @@
+include ':MyJetpack'
 include ':app',':mylibrary','myprocess','permission'
 include ':openCVLibrary330'

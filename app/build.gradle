@@ -77,5 +77,5 @@ dependencies {
     implementation project(':permission')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation project(path: ':openCVLibrary330')
-
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 }
