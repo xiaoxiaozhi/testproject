@@ -35,6 +35,7 @@ class KotlinClass constructor(name: String) {
                 field = -1
             }
         }
+    private lateinit var p2: String
 
     init {
         //初始化代码 可以使用主构造函数的变量
@@ -103,6 +104,7 @@ class KotlinClass constructor(name: String) {
     //继承--属性重载,子类中不能有跟父类属性名一样的属性，除非使用属性重载
     class claz8 : claz3 {
         constructor() : super("123")
+
         override var num: Int = 0
     }
 }

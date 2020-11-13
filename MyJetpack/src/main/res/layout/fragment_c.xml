@@ -6,14 +6,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Inner1Fragment">
-
+        tools:context=".CFragment">
 
         <TextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="内联跳转1"
+            android:text="C Fragment"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -21,11 +20,11 @@
             app:layout_constraintVertical_bias="0.1" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/toInner"
+            android:id="@+id/toA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="jump to inner"
+            android:text="jump to a"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text"></androidx.appcompat.widget.AppCompatButton>

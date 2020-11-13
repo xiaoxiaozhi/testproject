@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_welcomFragment_to_navigation2"
             app:destination="@id/navigation2" />
+        <action
+            android:id="@+id/action_welcomFragment_to_AFragment"
+            app:destination="@id/AFragment" />
     </fragment>
     <fragment
         android:id="@+id/registFragment"
@@ -51,7 +54,50 @@
             android:id="@+id/inner1Fragment"
             android:name="com.myjetpack.Inner1Fragment"
             android:label="fragment_inner1"
-            tools:layout="@layout/fragment_inner1" />
+            tools:layout="@layout/fragment_inner1">
+            <action
+                android:id="@+id/action_inner1Fragment_to_innerFragment"
+                app:destination="@id/innerFragment"
+                app:popUpTo="@id/inner1Fragment"
+                app:popUpToInclusive="true" />
+        </fragment>
     </navigation>
-
+    <include app:graph="@navigation/include_nav"></include>
+    <action
+        android:id="@+id/action_global_welcomFragment"
+        app:destination="@id/globalFragment" />
+    <fragment
+        android:id="@+id/globalFragment"
+        android:name="com.myjetpack.GlobalFragment"
+        android:label="fragment_global"
+        tools:layout="@layout/fragment_global" />
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.myjetpack.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/action_AFragment_to_BFragment"
+            app:destination="@id/BFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.myjetpack.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b">
+        <action
+            android:id="@+id/action_BFragment_to_CFragment"
+            app:destination="@id/CFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CFragment"
+        android:name="com.myjetpack.CFragment"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c">
+        <action
+            android:id="@+id/action_CFragment_to_AFragment"
+            app:destination="@id/AFragment"
+            app:popUpTo="@id/AFragment"
+            />
+    </fragment>
 </navigation>

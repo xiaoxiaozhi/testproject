@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import com.myapplication.R
 import com.myapplication.activity.kotlinActivity.Companion.TAG
+import com.myapplication.interfac.KotlinFunInterface
+import com.myapplication.interfac.KotlinInterface
 import com.myapplication.module.KotlinClass
 
 /**
@@ -17,6 +19,7 @@ class kotlinActivity : BaseActivity() {
     //静态代码块
     companion object {
         const val TAG = "kotlinActivity"
+
         init {
             //你想静态化的东西,外面不要有函数
         }
@@ -59,6 +62,8 @@ class kotlinActivity : BaseActivity() {
         kot.p1 = "123";
         kot.no = 1;
         println("p1 = ${kot.p1} no = ${kot.no}")
+        //2.1 函数式接口:注意函数式接口需要在 interface前面加 fun
+        var inter = KotlinFunInterface { "" }
         //2.1 类扩展函数,注意在类外面声明
         kot.print()
 

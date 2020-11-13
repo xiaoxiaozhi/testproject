@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/include_nav"
+    app:startDestination="@id/includeFragment">
+
+    <fragment
+        android:id="@+id/includeFragment"
+        android:name="com.myjetpack.IncludeFragment"
+        android:label="fragment_include"
+        tools:layout="@layout/fragment_include" >
+        <action
+            android:id="@+id/action_includeFragment_to_includeFragment1"
+            app:destination="@id/includeFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/includeFragment1"
+        android:name="com.myjetpack.IncludeFragment1"
+        android:label="fragment_include1"
+        tools:layout="@layout/fragment_include1" />
+</navigation>

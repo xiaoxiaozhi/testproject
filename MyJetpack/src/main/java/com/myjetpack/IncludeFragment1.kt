@@ -5,10 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.navigation.fragment.findNavController
-import com.myjetpack.databinding.FragmentInnerBinding
-import com.myjetpack.databinding.FragmentInner1Binding as FragmentInner1Binding1
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Inner1Fragment.newInstance] factory method to
+ * Use the [IncludeFragment1.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Inner1Fragment : Fragment() {
+class IncludeFragment1 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,9 +31,8 @@ class Inner1Fragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        var binding: FragmentInner1Binding1 = DataBindingUtil.inflate(inflater, R.layout.fragment_inner1, container, false)
-        binding.toInner.setOnClickListener { findNavController().navigate(R.id.innerFragment) }
-        return binding.root
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_include1, container, false)
     }
 
     companion object {
@@ -47,12 +42,12 @@ class Inner1Fragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Inner1Fragment.
+         * @return A new instance of fragment IncludeFragment1.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-                Inner1Fragment().apply {
+                IncludeFragment1().apply {
                     arguments = Bundle().apply {
                         putString(ARG_PARAM1, param1)
                         putString(ARG_PARAM2, param2)

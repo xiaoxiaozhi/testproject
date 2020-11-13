@@ -51,8 +51,14 @@ class WelcomFragment : Fragment() {
         //1. 跳转&&传值  通过bundle
         binding.signIn.setOnClickListener { findNavController().navigate(R.id.loginFragment, bundle, navOption) }
         binding.signUp.setOnClickListener { findNavController().navigate(R.id.registFragment, bundle, navOption) }
+        //2.嵌套
         binding.toInner.setOnClickListener { findNavController().navigate(R.id.navigation2) }
-        //1.1 跳转&&传值  在xml中 起始fragment 设置argment 标签
+        //2.1 嵌套-include嵌套
+        binding.toInclude.setOnClickListener { findNavController().navigate(R.id.include_nav) }
+        //3.全局操作,action在navigation标签中，任何该标签下的fragment都能调用
+        binding.global.setOnClickListener { findNavController().navigate(R.id.globalFragment) }
+        //3.跳转: app:popUpTo="@id/AFragment" app:popUpToInclusive="true" 实际测试发现，不起作用,给的例子起作用，再议
+        binding.toA.setOnClickListener { findNavController().navigate(R.id.AFragment) }
         return binding.root
     }
 
