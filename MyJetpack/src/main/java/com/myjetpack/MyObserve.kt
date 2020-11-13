@@ -15,12 +15,12 @@ class MyObserve(lifecycle: Lifecycle) : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun connectListener() {
-        Log.i(TAG, "onResume");
+        Log.e(TAG, "onResume");
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun disconnectListener() {
-        Log.i("MyObserve", "ON_PAUSE");
+        Log.e(TAG, "ON_PAUSE");
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
@@ -32,6 +32,6 @@ class MyObserve(lifecycle: Lifecycle) : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onDestroy() {
-
+        Log.e(TAG, "onDestroy");
     }
 }

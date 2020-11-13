@@ -70,18 +70,18 @@ public class DataBindingActivity extends BaseActivity {
      * @param view
      * @param text
      */
-//    @BindingAdapter("android:text")
-//    public static void setText(TextView view, CharSequence text) {
-//        Log.e(TAG, "TextView " + view.hashCode() + " CharSequence : " + text);
-//        final CharSequence oldText = view.getText();
-//        if (text == oldText || (text == null && oldText.length() == 0)) {
-//            return;
-//        }
-//        if (text instanceof Spanned) {
-//            if (text.equals(oldText)) {
-//                return; // No change in the spans, so don't set anything.
-//            }
-//        }
-//        view.setText(text);
-//    }
+    @BindingAdapter("android:text")
+    public static void setText(TextView view, CharSequence text) {
+        Log.e(TAG, "TextView " + view.hashCode() + " CharSequence : " + text);
+        final CharSequence oldText = view.getText();
+        if (text == oldText || (text == null && oldText.length() == 0)) {
+            return;
+        }
+        if (text instanceof Spanned) {
+            if (text.equals(oldText)) {
+                return; // No change in the spans, so don't set anything.
+            }
+        }
+        view.setText(text);
+    }
 }

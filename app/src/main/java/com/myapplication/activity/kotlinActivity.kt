@@ -2,7 +2,9 @@ package com.myapplication.activity
 
 
 import android.os.Bundle
+import android.util.Log
 import com.myapplication.R
+import com.myapplication.activity.kotlinActivity.Companion.TAG
 import com.myapplication.module.KotlinClass
 
 /**
@@ -14,6 +16,7 @@ import com.myapplication.module.KotlinClass
 class kotlinActivity : BaseActivity() {
     //静态代码块
     companion object {
+        const val TAG = "kotlinActivity"
         init {
             //你想静态化的东西,外面不要有函数
         }
@@ -32,7 +35,10 @@ class kotlinActivity : BaseActivity() {
         for (i in 4..1 step 2) print(i) // 输出“42”
         //1.1 when 表达式，代替了switch when既可以当表达式使用也可以作为语句，when作为表达式的时候必须有else分支
         val s = when (3) {
-            1, 3 -> 1 // 可以把多个分支放在一起处理
+            1, 3 -> {
+                1
+                println("back 1")
+            } // 可以把多个分支放在一起处理
             Math.sqrt(3.toDouble()).toInt() -> 4 //表达式也可以作为分支条件
             in 1..10 -> print("x is in the range")// 检测 一个值在不在这个区间
             !in 1..10 -> print("x is not in the range")
@@ -41,6 +47,7 @@ class kotlinActivity : BaseActivity() {
                 print("什么都没有找到")
             }
         }
+        println("what is when back $s")//返回结果 kotlin.Unit 当一个函数没有返回值的时候，我们用Unit来表示这个特征
         //when 也可以替代 if-else
 //        when { 哪个条件为真执行哪个分支
 //            x.isOdd() -> print("x is odd")
@@ -52,14 +59,16 @@ class kotlinActivity : BaseActivity() {
         kot.p1 = "123";
         kot.no = 1;
         println("p1 = ${kot.p1} no = ${kot.no}")
-        Thread(object : Runnable {
-            override fun run() {
-// 匿名内部类
-            }
-        })
-//        2.1 java 类和kotlin 类做了区分
+        //2.1 类扩展函数,注意在类外面声明
+        kot.print()
+
+//        2.2 java 类和kotlin 类做了区分
 //        val kotlinClass : KClass<LocalDate> = LocalDate::class
-//        val javaClass : Class<LocalDate> = LocalDate::class.java
+//        val javaClass: Class<LocalDate> = LocalDate::class.java
 
     }
+}
+
+private fun KotlinClass.print() {
+    Log.i(TAG, "create extent function!!!")
 }

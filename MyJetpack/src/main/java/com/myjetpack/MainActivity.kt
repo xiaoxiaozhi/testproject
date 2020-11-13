@@ -2,6 +2,7 @@ package com.myjetpack
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
@@ -16,20 +17,28 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         lifecycle.addObserver(MyObserve(lifecycle))
+        Log.e(Companion.TAG, "get savedInstanceState value = " + savedInstanceState?.getString("save"))
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i(TAG, "onPause");
+        Log.e(Companion.TAG, "onPause");
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i(TAG, "onResume");
+        Log.e(Companion.TAG, "onResume");
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i(TAG, "onDestroy");
+        Log.e(Companion.TAG, "onDestroy");
     }
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        Log.e(Companion.TAG, "excute onSaveInstanceState");
+        outState.putString("save", "123")
+    }
+
 }

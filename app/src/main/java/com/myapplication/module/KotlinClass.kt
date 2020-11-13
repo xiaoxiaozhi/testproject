@@ -19,7 +19,10 @@ class KotlinClass constructor(name: String) {
 
     //2.属性声明 field 代表的变量本身，交后端变量，只能用于属性访问器
     var p1: String = ""
-        get() = field.toUpperCase()
+        get() {
+            field.toString()
+            return "$field sadnjskdfn asfd"
+        }
         set(value) {
             field = value
         }
@@ -100,7 +103,6 @@ class KotlinClass constructor(name: String) {
     //继承--属性重载,子类中不能有跟父类属性名一样的属性，除非使用属性重载
     class claz8 : claz3 {
         constructor() : super("123")
-
         override var num: Int = 0
     }
 }

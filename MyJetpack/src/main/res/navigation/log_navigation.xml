@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/log_navigation"
+    app:startDestination="@id/welcomFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.myjetpack.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/welcomFragment"
+        android:name="com.myjetpack.WelcomFragment"
+        android:label="fragment_welcom"
+        tools:layout="@layout/fragment_welcom">
+        <action
+            android:id="@+id/action_welcomFragment_to_loginFragment2"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/registFragment" />
+        <action
+            android:id="@+id/action_welcomFragment_to_registFragment"
+            app:destination="@id/registFragment" />
+        <argument
+            android:name="EMAIL"
+            android:defaultValue="2005@qq.com"
+            app:argType="string"></argument>
+        <action
+            android:id="@+id/action_welcomFragment_to_navigation2"
+            app:destination="@id/navigation2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registFragment"
+        android:name="com.myjetpack.ui.login.RegistFragment"
+        android:label="fragment_regist"
+        tools:layout="@layout/fragment_regist" />
+    <navigation
+        android:id="@+id/navigation2"
+        app:startDestination="@id/innerFragment">
+        <fragment
+            android:id="@+id/innerFragment"
+            android:name="com.myjetpack.InnerFragment"
+            android:label="fragment_inner"
+            tools:layout="@layout/fragment_inner">
+            <action
+                android:id="@+id/action_innerFragment_to_inner1Fragment"
+                app:destination="@id/inner1Fragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inner1Fragment"
+            android:name="com.myjetpack.Inner1Fragment"
+            android:label="fragment_inner1"
+            tools:layout="@layout/fragment_inner1" />
+    </navigation>
+
+</navigation>
