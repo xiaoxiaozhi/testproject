@@ -64,8 +64,9 @@ class kotlinActivity : BaseActivity() {
         println("p1 = ${kot.p1} no = ${kot.no}")
         //2.1 函数式接口:注意函数式接口需要在 interface前面加 fun
         var inter = KotlinFunInterface { "" }
-        //2.1 类扩展函数,注意在类外面声明
+        //2.2 类扩展函数,注意在类外面声明
         kot.print()
+        //2.3 数据类
 
 //        2.2 java 类和kotlin 类做了区分
 //        val kotlinClass : KClass<LocalDate> = LocalDate::class
