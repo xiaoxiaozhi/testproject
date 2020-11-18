@@ -213,15 +213,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.kotlinActivity"
-            android:label="kotlin练习">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="com.zhi.app" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".activity.OpenGLESActivity"
             android:label="OpenGlES">
             <intent-filter>
