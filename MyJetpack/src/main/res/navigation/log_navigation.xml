@@ -9,7 +9,12 @@
         android:id="@+id/loginFragment"
         android:name="com.myjetpack.ui.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <argument
+            android:name="myArg"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
     <fragment
         android:id="@+id/welcomFragment"
         android:name="com.myjetpack.WelcomFragment"
@@ -22,10 +27,6 @@
         <action
             android:id="@+id/action_welcomFragment_to_registFragment"
             app:destination="@id/registFragment" />
-        <argument
-            android:name="EMAIL"
-            android:defaultValue="2005@qq.com"
-            app:argType="string"></argument>
         <action
             android:id="@+id/action_welcomFragment_to_navigation2"
             app:destination="@id/navigation2" />

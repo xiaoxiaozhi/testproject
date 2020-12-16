@@ -6,10 +6,11 @@ package com.myapplication.module
  * 如果类没有注解也没有任何可见性修饰符，constructor可以省略class KotlinClass (name:String){}
  * 2.修饰符
  */
+//1.class KotlinClass constructor(var name: String) { //声明属性并从主构造函数中初始化属性
 class KotlinClass constructor(name: String) {
-    //1.次构造函数, 可以通过this 代理主构造函数
+    //1.1次构造函数, 可以通过this 代理主构造函数
     constructor(num: Int) : this(num.toString()) {
-        //1.1创建匿名内部类
+        //1.2创建匿名内部类
         object : claz3("123") {
             override fun pr() {
                 super.pr()

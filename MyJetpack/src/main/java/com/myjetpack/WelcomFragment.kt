@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavDeepLinkBuilder
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.myjetpack.databinding.FragmentWelcomBinding
+import com.myjetpack.ui.login.LoginFragmentDirections
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,7 +51,9 @@ class WelcomFragment : Fragment() {
             }
         }
         //1. 跳转&&传值  通过bundle
-        binding.signIn.setOnClickListener { findNavController().navigate(R.id.loginFragment, bundle, navOption) }
+        binding.signIn.setOnClickListener {
+            findNavController().navigate(R.id.loginFragment, bundle, navOption)
+        }
         binding.signUp.setOnClickListener { findNavController().navigate(R.id.registFragment, bundle, navOption) }
         //2.嵌套
         binding.toInner.setOnClickListener { findNavController().navigate(R.id.navigation2) }
@@ -59,6 +63,12 @@ class WelcomFragment : Fragment() {
         binding.global.setOnClickListener { findNavController().navigate(R.id.globalFragment) }
         //3.跳转: app:popUpTo="@id/AFragment" app:popUpToInclusive="true" 实际测试发现，不起作用,给的例子起作用，再议
         binding.toA.setOnClickListener { findNavController().navigate(R.id.AFragment) }
+        //4. 创建deeplink
+        binding.deepLink.setOnClickListener { findNavController().createDeepLink()
+                .setDestination(R.id.linkFragment)
+                .setArguments(Bundle())
+                .setGraph(R.navigation.deep_link)
+                .createPendingIntent() }
         return binding.root
     }
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deep_link"
+    app:startDestination="@id/linkFragment">
+
+    <fragment
+        android:id="@+id/linkFragment"
+        android:name="com.myjetpack.LinkFragment"
+        android:label="fragment_link"
+        tools:layout="@layout/fragment_link" />
+</navigation>
