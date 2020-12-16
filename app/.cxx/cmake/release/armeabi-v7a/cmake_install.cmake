@@ -1,4 +1,4 @@
-# Install script for directory: D:/workspace/mytestproject/app
+# Install script for directory: D:/workspace/testproject/app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/workspace/mytestproject/app/.cxx/cmake/release/armeabi-v7a/src/main/cpp/librtmp/cmake_install.cmake")
+  include("D:/workspace/testproject/app/.cxx/cmake/release/armeabi-v7a/src/main/cpp/librtmp/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/workspace/mytestproject/app/.cxx/cmake/release/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/workspace/testproject/app/.cxx/cmake/release/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
