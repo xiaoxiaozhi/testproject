@@ -1,0 +1,61 @@
+[
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -LD:/workspace/testproject/app/libs/armeabi-v7a -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-lib.dir\\src\\main\\cpp\\native-lib.cpp.o -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\native-lib.cpp",
+  "file": "D:/workspace/testproject/app/src/main/cpp/native-lib.cpp"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -LD:/workspace/testproject/app/libs/armeabi-v7a -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-lib.dir\\src\\main\\cpp\\VideoChannel.cpp.o -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\VideoChannel.cpp",
+  "file": "D:/workspace/testproject/app/src/main/cpp/VideoChannel.cpp"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -LD:/workspace/testproject/app/libs/armeabi-v7a -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-lib.dir\\src\\main\\cpp\\AudioChannel.cpp.o -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\AudioChannel.cpp",
+  "file": "D:/workspace/testproject/app/src/main/cpp/AudioChannel.cpp"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -LD:/workspace/testproject/app/libs/armeabi-v7a -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-lib.dir\\src\\main\\cpp\\WangYiFFmpeg.cpp.o -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\WangYiFFmpeg.cpp",
+  "file": "D:/workspace/testproject/app/src/main/cpp/WangYiFFmpeg.cpp"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -LD:/workspace/testproject/app/libs/armeabi-v7a -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-lib.dir\\src\\main\\cpp\\JavaCallHelper.cpp.o -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\JavaCallHelper.cpp",
+  "file": "D:/workspace/testproject/app/src/main/cpp/JavaCallHelper.cpp"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o src\\main\\cpp\\librtmp\\CMakeFiles\\rtmp.dir\\rtmp.c.o   -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\rtmp.c",
+  "file": "D:/workspace/testproject/app/src/main/cpp/librtmp/rtmp.c"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o src\\main\\cpp\\librtmp\\CMakeFiles\\rtmp.dir\\log.c.o   -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\log.c",
+  "file": "D:/workspace/testproject/app/src/main/cpp/librtmp/log.c"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o src\\main\\cpp\\librtmp\\CMakeFiles\\rtmp.dir\\amf.c.o   -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\amf.c",
+  "file": "D:/workspace/testproject/app/src/main/cpp/librtmp/amf.c"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o src\\main\\cpp\\librtmp\\CMakeFiles\\rtmp.dir\\hashswf.c.o   -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\hashswf.c",
+  "file": "D:/workspace/testproject/app/src/main/cpp/librtmp/hashswf.c"
+},
+
+{
+  "directory": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "D:\\AndroidSDK\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o src\\main\\cpp\\librtmp\\CMakeFiles\\rtmp.dir\\parseurl.c.o   -c D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\parseurl.c",
+  "file": "D:/workspace/testproject/app/src/main/cpp/librtmp/parseurl.c"
+}
+]
