@@ -60,7 +60,7 @@ fun foo1(): Int {     // 不良
 fun foo() = 1        // 良好
 
 //4. 高阶函数：参数类型是函数类型，或者返回值是函数类型的函数称为高阶函数，除此之外函数类型还能赋值给变量
-
+//扔物线lambda https://zhuanlan.zhihu.com/p/126498955
 //4.1  lambda 表达式-函数类型来声明函数 :()内是参数->之后是函数返回类新型
 var lambda1: (Int, Int) -> Int = { x, y -> x - y }
 
