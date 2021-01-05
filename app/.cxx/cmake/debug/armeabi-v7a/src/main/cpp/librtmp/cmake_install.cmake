@@ -1,4 +1,4 @@
-# Install script for directory: D:/workspace/testproject/app/src/main/cpp/librtmp
+# Install script for directory: D:/workspace/mytestproject/app/src/main/cpp/librtmp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

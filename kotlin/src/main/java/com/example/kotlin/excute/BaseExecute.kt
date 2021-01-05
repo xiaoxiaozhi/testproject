@@ -3,14 +3,18 @@
  */
 fun main(args: Array<String>) {
     //1.基础语法
-    //类型后面加?表示可为空
-    var age: Int? = 12
-    //如果是空抛出空指针异常
-    val ages = age!!.toInt()
+    //    var v:Int = null //  kotlin的变量不能赋值null，编译时就会报错
+    var age: Int? = null //空怎么表示呢：加?表示值可为空
     //如果空返回 null
     val ages1 = age?.toInt()
+    //如果是空抛出空指针异常目的是为了确保值一定不为空
+//    val ages = age!!.toInt()
+    println(ages1)
+    //1.1 elvis 操作符 ?:
+    var name: String? = null
+    println("字符串长度(${name?.length ?: 0})")
     for (i in 4..1 step 2) print(i) // 输出“42”
-    //1.1 when 表达式，代替了switch when既可以当表达式使用也可以作为语句，when作为表达式的时候必须有else分支
+    //1.2 when 表达式，代替了switch when既可以当表达式使用也可以作为语句，when作为表达式的时候必须有else分支
     val s = when (3) {
         1, 3 -> {
             1

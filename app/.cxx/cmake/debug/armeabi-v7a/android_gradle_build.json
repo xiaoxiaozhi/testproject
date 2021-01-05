@@ -1,92 +1,92 @@
 {
   "stringTable": {
-    "0": "D:/workspace/testproject/app/.cxx/cmake/debug/armeabi-v7a",
-    "1": "--target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -LD:/workspace/testproject/app/libs/armeabi-v7a -O0 -fno-limit-debug-info -fPIC",
+    "0": "D:/workspace/mytestproject/app/.cxx/cmake/debug/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -LD:/workspace/mytestproject/app/libs/armeabi-v7a -O0 -fno-limit-debug-info -fPIC",
     "2": "--target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/AndroidSDK/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -DNO_CRYPTO -O0 -fno-limit-debug-info -fPIC"
   },
   "buildFiles": [
-    "D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\CMakeLists.txt",
+    "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\librtmp\\CMakeLists.txt",
     "D:\\AndroidSDK\\ndk\\21.3.6528147\\build\\cmake\\android.toolchain.cmake",
     "D:\\AndroidSDK\\ndk\\21.3.6528147\\build\\cmake\\platforms.cmake",
-    "D:\\workspace\\testproject\\app\\CMakeLists.txt"
+    "D:\\workspace\\mytestproject\\app\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\testproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" clean"
+    "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\mytestproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" clean"
   ],
-  "buildTargetsCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"D:\\workspace\\testproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"D:\\workspace\\mytestproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "rtmp-Debug-armeabi-v7a": {
-      "buildCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\testproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" rtmp",
+      "buildCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\mytestproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" rtmp",
       "buildType": "debug",
       "toolchain": "3694493696",
       "abi": "armeabi-v7a",
       "artifactName": "rtmp",
       "files": [
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\rtmp.c",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\librtmp\\rtmp.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\log.c",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\librtmp\\log.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\amf.c",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\librtmp\\amf.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\hashswf.c",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\librtmp\\hashswf.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\librtmp\\parseurl.c",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\librtmp\\parseurl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "D:\\workspace\\testproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\src\\main\\cpp\\librtmp\\librtmp.a",
+      "output": "D:\\workspace\\mytestproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\src\\main\\cpp\\librtmp\\librtmp.a",
       "runtimeFiles": []
     },
     "native-lib-Debug-armeabi-v7a": {
-      "buildCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\testproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" native-lib",
+      "buildCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\mytestproject\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" native-lib",
       "buildType": "debug",
       "toolchain": "3694493696",
       "abi": "armeabi-v7a",
       "artifactName": "native-lib",
       "files": [
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\native-lib.cpp",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\native-lib.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\VideoChannel.cpp",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\VideoChannel.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\AudioChannel.cpp",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\AudioChannel.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\WangYiFFmpeg.cpp",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\WangYiFFmpeg.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\testproject\\app\\src\\main\\cpp\\JavaCallHelper.cpp",
+          "src": "D:\\workspace\\mytestproject\\app\\src\\main\\cpp\\JavaCallHelper.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "D:\\workspace\\testproject\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\\libnative-lib.so",
+      "output": "D:\\workspace\\mytestproject\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\\libnative-lib.so",
       "runtimeFiles": []
     }
   },

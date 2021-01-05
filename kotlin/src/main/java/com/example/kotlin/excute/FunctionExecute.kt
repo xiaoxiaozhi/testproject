@@ -76,26 +76,18 @@ fun foo1(): Int {     // 不良
 fun foo() = 1        // 良好
 
 //4. 高阶函数：参数类型是函数类型，或者返回值是函数类型的函数称为高阶函数，除此之外函数类型还能赋值给变量
-<<<<<<< HEAD
 //扔物线lambda https://zhuanlan.zhihu.com/p/126498955
-=======
-//仍物线 https://zhuanlan.zhihu.com/p/126498955
 //4.1 函数作为参数或返回：不同参数的函数不是一个类型，所以在声明高阶函数的时候要指定传参和返回
 fun a(funParame: () -> Unit): (Int, String) -> String {
     var b = ::parameFun//函数对象化，当参数传入或者返回时要加双冒号
 //    b(1,"2")等同于 b.invoke(1,"2") //
     return ::parameFun//用双冒号吧函数作为一个对象传递
 }
-
-
 fun parameFun(i: Int, s: String): String {
     return ""
 }
-
 //4.2 匿名函数：匿名函数不是函数，是一个对象
 var anonymousFun = fun() = 1
-
->>>>>>> 394803f8b564cfb2a10d867a6cc88e57dcbf65c8
 //4.1  lambda 表达式-函数类型来声明函数 :()内是参数->之后是函数返回类新型
 var lambda1: (Int, Int) -> Int = { x, y -> x - y }
 
