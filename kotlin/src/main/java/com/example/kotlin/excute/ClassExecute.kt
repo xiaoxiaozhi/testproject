@@ -54,8 +54,19 @@ interface Base {
 
 // 实现此接口的被委托的类
 class BaseImpl(val x: Int) : Base {
-    override fun print() { print(x) }
+    override fun print() {
+        print(x)
+    }
 }
 
 // 通过关键字 by 建立委托类
 class Derived(b: Base) : Base by b
+
+class Bird {
+    val weight: Double = 500.0
+    val color: String = "blue"
+    val age: Int = 1
+    fun fly(str: String) {
+        println("${str}会飞")
+    } // 全局可见
+}

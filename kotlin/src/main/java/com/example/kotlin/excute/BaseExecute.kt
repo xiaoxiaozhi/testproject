@@ -1,3 +1,5 @@
+import com.example.kotlin.excute.Bird
+
 /**
  *基础语法
  */
@@ -10,7 +12,7 @@ fun main(args: Array<String>) {
     //如果是空抛出空指针异常目的是为了确保值一定不为空
 //    val ages = age!!.toInt()
     println(ages1)
-    //1.1 elvis 操作符 ?:
+    //1.1 elvis 操作符 ?: 运算符之前true就返回之前，null=false
     var name: String? = null
     println("字符串长度(${name?.length ?: 0})")
     for (i in 4..1 step 2) print(i) // 输出“42”
@@ -35,5 +37,20 @@ fun main(args: Array<String>) {
 //            x.isEven() -> print("x is even")
 //            else -> print("x is funny")
 //        }
+    //1.3 ::引用
+    val book = ::Book //引用构造函数
+    book("kotlin核心编程")
+    println(Book::name)//引用属性
+}
+
+class Book(val name: String) {
+    val price = 100
+    fun printPrice() {
+        println("价格：￥100")
+    }
+
+    fun fun1(ss: String) {
+        println("${ss}sdsds");
+    }
 }
 
