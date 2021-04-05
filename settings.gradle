@@ -1,3 +1,4 @@
+include ':player'
 include ':kotlin'
 include ':MyJetpack'
 include ':app',':mylibrary','myprocess','permission'

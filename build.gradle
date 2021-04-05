@@ -7,6 +7,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://raw.githubusercontent.com/saki4510t/libcommon/master/repository/' }
     } 
     dependencies {
 //     gradle插件和gradl版本对应关系   https://www.jianshu.com/p/878a11dbf1ba
@@ -23,8 +24,10 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
         google()
         jcenter()
+        maven { url 'https://gitee.com/liuchaoya/libcommon/raw/master/repository/' }
     }
 }
 
