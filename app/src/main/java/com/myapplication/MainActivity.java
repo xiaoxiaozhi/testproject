@@ -71,9 +71,11 @@ public class MainActivity extends BaseActivity {
     private static final int REQUEST_CODE = 0; // 请求码
     private PermissionsChecker mPermissionsChecker; // 权限检测器
     public static MemeryActivity ma;
+
     static {
         System.loadLibrary("native-lib");
     }
+
     @Override
     public void initToolbar(@NotNull Toolbar toolbar) {
         toolbar.setTitle("日常记录");
@@ -83,6 +85,11 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i(this.getClass().getName(), "onCreate");
+        Log.i(this.getClass().getName(), "存储卡路径 = " + Environment.getExternalStorageDirectory().getAbsolutePath());
+        Log.i(this.getClass().getName(), "APP缓存路径 = " + Environment.getDataDirectory().getAbsolutePath());
+        Log.i(this.getClass().getName(), "APP缓存路径 = " + getFilesDir().getAbsolutePath());
+        Log.i(this.getClass().getName(), "APP缓存路径 = " + getExternalCacheDir().getAbsolutePath());
+        Log.i(this.getClass().getName(), "APP缓存路径 = " + getExternalFilesDir(null).getAbsolutePath());
         setContentView(R.layout.activity_main);
         RecyclerView recyclerView = findViewById(R.id.recycle);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, 1));
@@ -125,8 +132,8 @@ public class MainActivity extends BaseActivity {
 //            goHuaweiSetting();
 //        }
         // 如参考，最好加入一个界面开启这些服务
-        Log.i(this.getClass().getSimpleName(), "getPath()---"+Environment.getExternalStorageDirectory().getPath());
-        Log.i(this.getClass().getSimpleName(), "getAbsolutePath()---"+Environment.getExternalStorageDirectory().getAbsolutePath());
+        Log.i(this.getClass().getSimpleName(), "getPath()---" + Environment.getExternalStorageDirectory().getPath());
+        Log.i(this.getClass().getSimpleName(), "getAbsolutePath()---" + Environment.getExternalStorageDirectory().getAbsolutePath());
     }
 
     @Override

@@ -193,7 +193,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.BaseActivity" />
-        <activity android:name=".activity.TestActivity" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:label="用例测试">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.zhi.app" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.ConstraintLayoutTestActivity"
             android:label="ConstraintLayout布局学习">

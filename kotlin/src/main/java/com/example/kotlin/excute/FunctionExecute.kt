@@ -14,6 +14,7 @@ fun main(args: Array<String>) {
 
     println(lambda1(10, 5))
 //    A::foo(1)
+//    lambda4(1)
 }
 
 //1.默认参数的函数
@@ -69,21 +70,20 @@ class MyStringCollection {
 
 
 //3. 编码规范
-fun foo1(): Int {     // 不良
+fun foo1(): Int {     // 不良 代码块函数
     return 1
 }
 
-fun foo() = 1        // 良好
+fun foo() = 1        // 良好 表达式函数体
 
 //4. 高阶函数：参数类型是函数类型，或者返回值是函数类型的函数称为高阶函数，除此之外函数类型还能赋值给变量
-//仍物线 https://zhuanlan.zhihu.com/p/126498955
+//扔物线lambda https://zhuanlan.zhihu.com/p/126498955
 //4.1 函数作为参数或返回：不同参数的函数不是一个类型，所以在声明高阶函数的时候要指定传参和返回
 fun a(funParame: () -> Unit): (Int, String) -> String {
     var b = ::parameFun//函数对象化，当参数传入或者返回时要加双冒号
 //    b(1,"2")等同于 b.invoke(1,"2") //
     return ::parameFun//用双冒号吧函数作为一个对象传递
 }
-
 
 fun parameFun(i: Int, s: String): String {
     return ""
@@ -92,11 +92,14 @@ fun parameFun(i: Int, s: String): String {
 //4.2 匿名函数：匿名函数不是函数，是一个对象
 var anonymousFun = fun() = 1
 
-//4.1  lambda 表达式-函数类型来声明函数 :()内是参数->之后是函数返回类新型
+//4.1  lambda 表达式-函数类型来声明函数 :()内是参数->之后是函数返回类新型。一个lambda函数必须用{}包裹
 var lambda1: (Int, Int) -> Int = { x, y -> x - y }
 
-//4.1  lambda 表达式-函数类型来声明函数 :带有接收者的函数
-//var lambda2: Math.(Int) -> Unit = { x.(u) -> x-u }
+//由于支持类型推断,lambd3的类型更可以省略
+val lambd3 = { x: Int -> x }
+
+//单个参数隐藏名称。 forEach函数的参数是一个函数对象：参数it 函数体{it.toSting()}
+val lambda4 = { x: Int -> listOf<Int>(1, 2, 3).forEach { println(it.toString()) } }
 //4.2 lambda 表达式-挂起函数
 //var lambda2: Math.(Int) -> Unit = { x.(u) -> x-u }
 //
